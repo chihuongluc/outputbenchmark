@@ -1,0 +1,35 @@
+namespace OBM.Data.Models
+{
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("Schedule")]
+    public partial class Schedule
+    {
+        public string ID { get; set; }
+
+        [Required]
+        [StringLength(128)]
+        public string FinalTestID { get; set; }
+
+        public int SubjectID { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string TestDate { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string TestTime { get; set; }
+
+        public int RoomID { get; set; }
+
+        public bool Done { get; set; }
+
+        public virtual FinalTest FinalTest { get; set; }
+
+        public virtual Room Room { get; set; }
+
+        public virtual Subject Subject { get; set; }
+    }
+}
