@@ -14,7 +14,6 @@ namespace OBM.App.Views
 {
     public partial class Students : Form
     {
-        StudentService s = new StudentService();
         public Students()
         {
             InitializeComponent();
@@ -28,26 +27,25 @@ namespace OBM.App.Views
 
         private void LoadDataGridView()
         {
-            // Set data
-            List<Student> list = new List<Student>() {
-                new Student() { ID = "150501001", LastName = "Lâm Tú", FirstName = "Phụng", Gender = "Nữ", Birthday = "01/01/1997", Birthplace = "Cà Mau", Course = "18TH0101", Mobile = "", Email = "" },
-                new Student() { ID = "150501002", LastName = "Phạm Đạt", FirstName = "Lợi", Gender = "Nam", Birthday = "11/12/1996", Birthplace = "TP.Hồ Chí Minh", Course = "18TH0101", Mobile = "", Email = "" },
-                new Student() { ID = "150501003", LastName = "Nguyễn Chí", FirstName = "Trung", Gender = "Nam", Birthday = "30/12/1995", Birthplace = "Bạc Liêu", Course = "18TH0101", Mobile = "", Email = "" }
-            };
-            dtgv.DataSource = s.GetAll().ToList();
+            var list = StudentService.Ins.GetAll()
+                .Select(p=> new { ID = p.ID, Fullname = p.LastName +" "+ p.FirstName, Gender = p.Gender, Birthday = p.Birthday, Birthplace = p.Birthplace, Course = p.Course}).ToList();
+
+            dtgv.DataSource = list;
 
             // Xoá auto size cho tất cả các column
             for (int i = 0; i < dtgv.Columns.Count-1; i++)
                 dtgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-            string[] colHeader = { "MSSV", "Họ", "Tên", "Phái", "Ngày sinh", "Nơi sinh", "Lớp", "SĐT", "Email" };
-            int[] colWidth = { 90, 160, 80, 70, 110, 115, 100, 100, 300 };
+            string[] colHeader = { "MSSV", "Họ Tên", "Giới tính", "Ngày sinh", "Nơi sinh", "Lớp" };
+            int[] colWidth = { 120, 240, 100, 150, 200, 100};
 
             // Đổi tên các column và set độ rộng
-            for (int i = 0; i < dtgv.Columns.Count-1; i++)
+            for (int i = 0; i < dtgv.Columns.Count; i++)
             {
                 dtgv.Columns[i].HeaderText = colHeader[i];
                 dtgv.Columns[i].Width = colWidth[i];
+                if (i == dtgv.Columns.Count - 1)
+                    dtgv.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
 

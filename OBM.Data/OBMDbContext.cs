@@ -5,7 +5,8 @@ namespace OBM.Data
 
     public partial class OBMDbContext : DbContext
     {
-        public OBMDbContext(): base("name=OBMDbContext")
+        public OBMDbContext()
+            : base("name=OBMDbContext")
         {
         }
 
@@ -13,7 +14,7 @@ namespace OBM.Data
         public virtual DbSet<ChineseScore> ChineseScores { get; set; }
         public virtual DbSet<FinalTest> FinalTests { get; set; }
         public virtual DbSet<ITScore> ITScores { get; set; }
-        public virtual DbSet<JoinFinalTest> JoinFinalTests { get; set; }
+        public virtual DbSet<Register> Registers { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<Schedule> Schedules { get; set; }
@@ -28,19 +29,30 @@ namespace OBM.Data
                 .Property(e => e.Email)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<FinalTest>()
-                .HasMany(e => e.JoinFinalTests)
-                .WithRequired(e => e.FinalTest)
-                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<ChineseScore>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
 
             modelBuilder.Entity<FinalTest>()
                 .HasMany(e => e.Schedules)
                 .WithRequired(e => e.FinalTest)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<JoinFinalTest>()
-                .Property(e => e.Code)
+            modelBuilder.Entity<ITScore>()
+                .Property(e => e.ID)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Register>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Register>()
+                .Property(e => e.StudentID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Register>()
+                .HasOptional(e => e.Score)
+                .WithRequired(e => e.Register);
 
             modelBuilder.Entity<Role>()
                 .HasMany(e => e.Accounts)
@@ -57,6 +69,10 @@ namespace OBM.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<Score>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Score>()
                 .HasOptional(e => e.ChineseScore)
                 .WithRequired(e => e.Score);
 
@@ -67,6 +83,10 @@ namespace OBM.Data
             modelBuilder.Entity<Score>()
                 .HasOptional(e => e.ToeicScore)
                 .WithRequired(e => e.Score);
+
+            modelBuilder.Entity<Student>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
                 .Property(e => e.Birthday)
@@ -85,7 +105,7 @@ namespace OBM.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<Student>()
-                .HasMany(e => e.JoinFinalTests)
+                .HasMany(e => e.Registers)
                 .WithRequired(e => e.Student)
                 .WillCascadeOnDelete(false);
 
@@ -94,7 +114,7 @@ namespace OBM.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<Subject>()
-                .HasMany(e => e.JoinFinalTests)
+                .HasMany(e => e.Registers)
                 .WithRequired(e => e.Subject)
                 .WillCascadeOnDelete(false);
 
@@ -102,6 +122,10 @@ namespace OBM.Data
                 .HasMany(e => e.Schedules)
                 .WithRequired(e => e.Subject)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ToeicScore>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
         }
     }
 }

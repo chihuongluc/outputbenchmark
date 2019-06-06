@@ -1,9 +1,6 @@
 ﻿using OBM.App.Common;
 using OBM.App.Views;
 using OBM.Data;
-using OBM.Data.Infrastructure;
-using OBM.Data.Repositories;
-using OBM.Service;
 using SimpleInjector;
 using SimpleInjector.Diagnostics;
 using SimpleInjector.Extensions.ExecutionContextScoping;

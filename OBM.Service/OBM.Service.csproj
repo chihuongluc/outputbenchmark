@@ -48,19 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountService.cs" />
-    <Compile Include="ChineseScoreService.cs" />
-    <Compile Include="FinalTestService.cs" />
-    <Compile Include="ITScoreService.cs" />
-    <Compile Include="JoinFinalTestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoleService.cs" />
-    <Compile Include="RoomService.cs" />
-    <Compile Include="ScheduleService.cs" />
-    <Compile Include="ScoreService.cs" />
     <Compile Include="StudentService.cs" />
-    <Compile Include="SubjectService.cs" />
-    <Compile Include="ToeicScoreService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

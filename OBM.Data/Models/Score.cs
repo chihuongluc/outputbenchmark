@@ -6,10 +6,10 @@ namespace OBM.Data.Models
     [Table("Score")]
     public partial class Score
     {
+        [StringLength(10)]
         public string ID { get; set; }
 
-        [StringLength(128)]
-        public string JoinFinalTestID { get; set; }
+        public int Times { get; set; }
 
         public double? Value { get; set; }
 
@@ -17,7 +17,7 @@ namespace OBM.Data.Models
 
         public virtual ITScore ITScore { get; set; }
 
-        public virtual JoinFinalTest JoinFinalTest { get; set; }
+        public virtual Register Register { get; set; }
 
         public virtual ToeicScore ToeicScore { get; set; }
     }

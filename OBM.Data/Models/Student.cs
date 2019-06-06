@@ -10,7 +10,7 @@ namespace OBM.Data.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Student()
         {
-            JoinFinalTests = new HashSet<JoinFinalTest>();
+            Registers = new HashSet<Register>();
         }
 
         [StringLength(10)]
@@ -23,7 +23,7 @@ namespace OBM.Data.Models
         [Required]
         [StringLength(10)]
         public string FirstName { get; set; }
-        
+
         [Required]
         [StringLength(10)]
         public string Gender { get; set; }
@@ -46,7 +46,11 @@ namespace OBM.Data.Models
         [StringLength(100)]
         public string Email { get; set; }
 
+        public bool? PassForeignLanguage { get; set; }
+
+        public bool? PassInformationTechnology { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<JoinFinalTest> JoinFinalTests { get; set; }
+        public virtual ICollection<Register> Registers { get; set; }
     }
 }

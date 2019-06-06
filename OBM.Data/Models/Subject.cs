@@ -10,7 +10,7 @@ namespace OBM.Data.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Subject()
         {
-            JoinFinalTests = new HashSet<JoinFinalTest>();
+            Registers = new HashSet<Register>();
             Schedules = new HashSet<Schedule>();
         }
 
@@ -25,7 +25,7 @@ namespace OBM.Data.Models
         public string Code { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<JoinFinalTest> JoinFinalTests { get; set; }
+        public virtual ICollection<Register> Registers { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Schedule> Schedules { get; set; }
