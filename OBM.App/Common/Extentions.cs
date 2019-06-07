@@ -1,20 +1,15 @@
-﻿using SimpleInjector;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OBM.App.Common
 {
     public static class Extentions
     {
-        public static Container container;
         public static void AddFormIntoPanel(object frm, Panel pnl)
         {
             if (pnl.Controls.Count > 0)

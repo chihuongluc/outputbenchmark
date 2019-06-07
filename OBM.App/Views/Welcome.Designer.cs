@@ -41,8 +41,8 @@ namespace OBM.App.Views
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dragControl1 = new DragControl();
-            this.dragControl2 = new DragControl();
+            this.dragControl1 = new OBM.App.Common.DragControl();
+            this.dragControl2 = new OBM.App.Common.DragControl();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +84,7 @@ namespace OBM.App.Views
             this.btnSettingDatabase.Name = "btnSettingDatabase";
             this.btnSettingDatabase.Size = new System.Drawing.Size(300, 38);
             this.btnSettingDatabase.TabIndex = 0;
-            this.btnSettingDatabase.Text = "  Connect to Server";
+            this.btnSettingDatabase.Text = "  Kết nối database";
             this.btnSettingDatabase.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSettingDatabase.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSettingDatabase.UseVisualStyleBackColor = false;
@@ -127,9 +127,9 @@ namespace OBM.App.Views
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(45, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 30);
+            this.label2.Size = new System.Drawing.Size(99, 30);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Welcome";
+            this.label2.Text = "Xin chào";
             // 
             // panel1
             // 
@@ -168,11 +168,11 @@ namespace OBM.App.Views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("iCiel Alina", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Gabriola", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(85, 267);
+            this.label3.Location = new System.Drawing.Point(68, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 80);
+            this.label3.Size = new System.Drawing.Size(164, 118);
             this.label3.TabIndex = 2;
             this.label3.Text = "E-Sky";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -39,6 +39,7 @@ namespace OBM.App.Views
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnFinalTest = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panelSide = new System.Windows.Forms.Panel();
@@ -49,7 +50,7 @@ namespace OBM.App.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.dragControl1 = new DragControl();
+            this.dragControl1 = new OBM.App.Common.DragControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccountImage)).BeginInit();
             this.panelLeft.SuspendLayout();
@@ -82,7 +83,7 @@ namespace OBM.App.Views
             this.labDisplayName.Name = "labDisplayName";
             this.labDisplayName.Size = new System.Drawing.Size(180, 35);
             this.labDisplayName.TabIndex = 16;
-            this.labDisplayName.Text = "Tên hiển thị";
+            this.labDisplayName.Text = "Tên tài khoản";
             this.labDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pbAccountImage
@@ -140,7 +141,7 @@ namespace OBM.App.Views
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(230, 720);
+            this.panelLeft.Size = new System.Drawing.Size(230, 680);
             this.panelLeft.TabIndex = 4;
             // 
             // panel8
@@ -150,17 +151,37 @@ namespace OBM.App.Views
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(0, 120);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(230, 600);
+            this.panel8.Size = new System.Drawing.Size(230, 560);
             this.panel8.TabIndex = 7;
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.btnFinalTest);
             this.panelMenu.Controls.Add(this.btnStudent);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMenu.Location = new System.Drawing.Point(6, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(224, 600);
+            this.panelMenu.Size = new System.Drawing.Size(224, 560);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnFinalTest
+            // 
+            this.btnFinalTest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinalTest.FlatAppearance.BorderSize = 0;
+            this.btnFinalTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalTest.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalTest.ForeColor = System.Drawing.Color.DimGray;
+            this.btnFinalTest.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalTest.Image")));
+            this.btnFinalTest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinalTest.Location = new System.Drawing.Point(0, 43);
+            this.btnFinalTest.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFinalTest.Name = "btnFinalTest";
+            this.btnFinalTest.Size = new System.Drawing.Size(224, 42);
+            this.btnFinalTest.TabIndex = 2;
+            this.btnFinalTest.Text = "   Quản lý kỳ thi";
+            this.btnFinalTest.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFinalTest.UseVisualStyleBackColor = true;
+            this.btnFinalTest.Click += new System.EventHandler(this.btnFinalTest_Click);
             // 
             // btnStudent
             // 
@@ -176,7 +197,7 @@ namespace OBM.App.Views
             this.btnStudent.Name = "btnStudent";
             this.btnStudent.Size = new System.Drawing.Size(224, 42);
             this.btnStudent.TabIndex = 2;
-            this.btnStudent.Text = "   Students";
+            this.btnStudent.Text = "   Quản lý sinh viên";
             this.btnStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStudent.UseVisualStyleBackColor = true;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
@@ -187,7 +208,7 @@ namespace OBM.App.Views
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(6, 600);
+            this.panel9.Size = new System.Drawing.Size(6, 560);
             this.panel9.TabIndex = 0;
             // 
             // panelSide
@@ -224,11 +245,11 @@ namespace OBM.App.Views
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("iCiel Alina", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gabriola", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(66, 2);
+            this.label1.Location = new System.Drawing.Point(60, -7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 107);
+            this.label1.Size = new System.Drawing.Size(164, 118);
             this.label1.TabIndex = 2;
             this.label1.Text = "E-Sky";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,7 +259,7 @@ namespace OBM.App.Views
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(230, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 680);
+            this.panel2.Size = new System.Drawing.Size(10, 640);
             this.panel2.TabIndex = 5;
             // 
             // panel3
@@ -246,7 +267,7 @@ namespace OBM.App.Views
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(1190, 40);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 680);
+            this.panel3.Size = new System.Drawing.Size(10, 640);
             this.panel3.TabIndex = 6;
             // 
             // panel4
@@ -264,7 +285,7 @@ namespace OBM.App.Views
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl.Location = new System.Drawing.Point(240, 42);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(950, 678);
+            this.panelControl.Size = new System.Drawing.Size(950, 638);
             this.panelControl.TabIndex = 8;
             // 
             // dragControl1
@@ -275,7 +296,7 @@ namespace OBM.App.Views
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1200, 720);
+            this.ClientSize = new System.Drawing.Size(1200, 680);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -311,7 +332,6 @@ namespace OBM.App.Views
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -321,5 +341,7 @@ namespace OBM.App.Views
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.PictureBox pbAccountImage;
         private System.Windows.Forms.Label labDisplayName;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Button btnFinalTest;
     }
 }

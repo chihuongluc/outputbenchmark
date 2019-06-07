@@ -45,9 +45,9 @@ namespace OBM.App.Views
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(46, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 23);
+            this.label2.Size = new System.Drawing.Size(95, 23);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Login";
+            this.label2.Text = "Đăng nhập";
             // 
             // linkLabelForgotPass
             // 
@@ -56,12 +56,12 @@ namespace OBM.App.Views
             this.linkLabelForgotPass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelForgotPass.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelForgotPass.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.linkLabelForgotPass.Location = new System.Drawing.Point(143, 218);
+            this.linkLabelForgotPass.Location = new System.Drawing.Point(152, 218);
             this.linkLabelForgotPass.Name = "linkLabelForgotPass";
-            this.linkLabelForgotPass.Size = new System.Drawing.Size(114, 17);
+            this.linkLabelForgotPass.Size = new System.Drawing.Size(96, 17);
             this.linkLabelForgotPass.TabIndex = 35;
             this.linkLabelForgotPass.TabStop = true;
-            this.linkLabelForgotPass.Text = "Forgot password?";
+            this.linkLabelForgotPass.Text = "Quên mật khẩu";
             this.linkLabelForgotPass.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             // 
             // chkShowPass
@@ -70,11 +70,11 @@ namespace OBM.App.Views
             this.chkShowPass.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkShowPass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkShowPass.ForeColor = System.Drawing.Color.DimGray;
-            this.chkShowPass.Location = new System.Drawing.Point(231, 135);
+            this.chkShowPass.Location = new System.Drawing.Point(222, 135);
             this.chkShowPass.Name = "chkShowPass";
-            this.chkShowPass.Size = new System.Drawing.Size(119, 21);
+            this.chkShowPass.Size = new System.Drawing.Size(128, 21);
             this.chkShowPass.TabIndex = 33;
-            this.chkShowPass.Text = "Show password";
+            this.chkShowPass.Text = "Hiển thị mật khẩu";
             this.chkShowPass.UseVisualStyleBackColor = true;
             this.chkShowPass.CheckedChanged += new System.EventHandler(this.chkShowPass_CheckedChanged);
             // 
@@ -89,7 +89,7 @@ namespace OBM.App.Views
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(300, 32);
             this.btnLogin.TabIndex = 34;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -102,7 +102,7 @@ namespace OBM.App.Views
             this.txbPassword.TabIndex = 37;
             this.txbPassword.UseSystemPasswordChar = true;
             this.txbPassword.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbPassword.WaterMarkText = "Password";
+            this.txbPassword.WaterMarkText = "Mật khẩu";
             // 
             // txbUserName
             // 
@@ -112,7 +112,7 @@ namespace OBM.App.Views
             this.txbUserName.Size = new System.Drawing.Size(300, 29);
             this.txbUserName.TabIndex = 37;
             this.txbUserName.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbUserName.WaterMarkText = "User name";
+            this.txbUserName.WaterMarkText = "Tài khoản";
             // 
             // Login
             // 

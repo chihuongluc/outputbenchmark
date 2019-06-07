@@ -23,5 +23,10 @@ namespace OBM.Service
         {
             return DataProvider.Ins.DB.Students.ToList();
         }
+
+        public Student GetSingleByID(string id)
+        {
+            return DataProvider.Ins.DB.Students.Find(id);
+        }
     }
 }

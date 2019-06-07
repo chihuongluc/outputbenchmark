@@ -1,13 +1,5 @@
 ﻿using OBM.App.Common;
-using SimpleInjector;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OBM.App.Views
@@ -19,7 +11,7 @@ namespace OBM.App.Views
             InitializeComponent();
             Extentions.AddFormIntoPanel(new Login(this), panelControl);
         }
-        
+
         /// <summary>
         /// Set Border style 3D cho Form
         /// </summary>

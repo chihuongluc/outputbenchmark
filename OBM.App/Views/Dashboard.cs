@@ -56,5 +56,11 @@ namespace OBM.App.Views
             MoveSidePanel(sender as Button);
             Extentions.AddFormIntoPanel(new Students(), panelControl);
         }
+
+        private void btnFinalTest_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(sender as Button);
+            Extentions.AddFormIntoPanel(new FinalTest(), panelControl);
+        }
     }
 }
