@@ -93,6 +93,16 @@ namespace OBM.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_24px {
+            get {
+                object obj = ResourceManager.GetObject("edit_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Excel_24px {
             get {
                 object obj = ResourceManager.GetObject("Excel_24px", resourceCulture);
@@ -166,6 +176,16 @@ namespace OBM.App.Properties {
         internal static System.Drawing.Bitmap Search_24px {
             get {
                 object obj = ResourceManager.GetObject("Search_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undo_24px {
+            get {
+                object obj = ResourceManager.GetObject("undo_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

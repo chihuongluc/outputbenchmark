@@ -52,6 +52,7 @@ namespace OBM.App.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.dragControl1 = new OBM.App.Common.DragControl();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccountImage)).BeginInit();
             this.panelLeft.SuspendLayout();
@@ -65,6 +66,7 @@ namespace OBM.App.Views
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(113)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.labDisplayName);
             this.panel1.Controls.Add(this.pbAccountImage);
@@ -84,7 +86,7 @@ namespace OBM.App.Views
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Image = global::OBM.App.Properties.Resources.left_filled_24px;
+            this.btnBack.Image = global::OBM.App.Properties.Resources.undo_24px;
             this.btnBack.Location = new System.Drawing.Point(0, 0);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(45, 30);
@@ -95,7 +97,7 @@ namespace OBM.App.Views
             // labDisplayName
             // 
             this.labDisplayName.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labDisplayName.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDisplayName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDisplayName.ForeColor = System.Drawing.Color.White;
             this.labDisplayName.Location = new System.Drawing.Point(885, 0);
             this.labDisplayName.Name = "labDisplayName";
@@ -196,8 +198,8 @@ namespace OBM.App.Views
             this.btnFinalTest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFinalTest.FlatAppearance.BorderSize = 0;
             this.btnFinalTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalTest.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalTest.ForeColor = System.Drawing.Color.DimGray;
+            this.btnFinalTest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalTest.ForeColor = System.Drawing.Color.Black;
             this.btnFinalTest.Image = ((System.Drawing.Image)(resources.GetObject("btnFinalTest.Image")));
             this.btnFinalTest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinalTest.Location = new System.Drawing.Point(0, 43);
@@ -215,8 +217,8 @@ namespace OBM.App.Views
             this.btnStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStudent.FlatAppearance.BorderSize = 0;
             this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudent.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudent.ForeColor = System.Drawing.Color.DimGray;
+            this.btnStudent.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudent.ForeColor = System.Drawing.Color.Black;
             this.btnStudent.Image = ((System.Drawing.Image)(resources.GetObject("btnStudent.Image")));
             this.btnStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStudent.Location = new System.Drawing.Point(0, 0);
@@ -310,6 +312,18 @@ namespace OBM.App.Views
             // 
             this.dragControl1.SelectControl = this.panel1;
             // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(45, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(273, 30);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Phần mềm quản lý điểm chuẩn đầu ra";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -362,5 +376,6 @@ namespace OBM.App.Views
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -102,8 +102,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AccountVM.cs" />
+    <Compile Include="ViewModels\BirthplaceVM.cs" />
     <Compile Include="ViewModels\ChineseScoreVM.cs" />
     <Compile Include="ViewModels\FinalTestVM.cs" />
+    <Compile Include="ViewModels\GenderVM.cs" />
     <Compile Include="ViewModels\ITScoreVM.cs" />
     <Compile Include="ViewModels\RegisterVM.cs" />
     <Compile Include="ViewModels\RoleVM.cs" />
@@ -137,6 +139,30 @@
     <Compile Include="Views\Students.Designer.cs">
       <DependentUpon>Students.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ucFinalTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucFinalTest.Designer.cs">
+      <DependentUpon>ucFinalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucStudentDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucStudentDetails.Designer.cs">
+      <DependentUpon>ucStudentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucStudents.Designer.cs">
+      <DependentUpon>ucStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucTest.Designer.cs">
+      <DependentUpon>ucTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +185,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucFinalTest.resx">
+      <DependentUpon>ucFinalTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucStudentDetails.resx">
+      <DependentUpon>ucStudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucStudents.resx">
+      <DependentUpon>ucStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucTest.resx">
+      <DependentUpon>ucTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -240,6 +278,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,8 +13,8 @@ namespace OBM.App.Views
 {
     public partial class Dashboard : Form
     {
+        #region Properties
         static Dashboard _obj;
-        static string _formOpening = "";
 
         public static Dashboard Instance
         {
@@ -34,17 +34,23 @@ namespace OBM.App.Views
             set { panelContainer = value; }
         }
 
+        public Panel PnlMenu
+        {
+            get { return panelMenu; }
+            set { panelMenu = value; }
+        }
+
         public Button BackButton
         {
             get { return btnBack; }
             set { btnBack = value; }
         }
-
+        #endregion
         public Dashboard()
         {
+            _obj = this;
             InitializeComponent();
-            //Extentions.AddFormIntoPanel(new Students(), panelContainer);
-            LoadNewForm(new Students(), "Students");
+            LoadNewForm(new ucStudents());
         }
 
         /// <summary>
@@ -60,21 +66,16 @@ namespace OBM.App.Views
             }
         }
 
-        private void LoadNewForm(object frm, string formName)
+        private void LoadNewForm(UserControl uc)
         {
-            btnBack.Enabled = false;
-            _obj = this;
-
             if (panelContainer.Controls.Count > 0)
-                panelContainer.Controls.RemoveAt(0);
-            Form f = frm as Form;
-            f.TopLevel = false;
-            f.FormBorderStyle = FormBorderStyle.None;
-            f.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(f);
-            panelContainer.Tag = f;
-            _formOpening = formName;
-            f.Show();
+                for (int i = 0; i < panelContainer.Controls.Count; i++)
+                    panelContainer.Controls.RemoveAt(i);
+
+            uc.Dock = DockStyle.Fill;
+            panelContainer.Controls.Add(uc);
+            btnBack.Enabled = false;
+            panelMenu.Enabled = true;
         }
 
         private void MoveSidePanel(Control btn)
@@ -96,24 +97,27 @@ namespace OBM.App.Views
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            if (panelContainer.Controls.Count > 0)
+                for (int i = 0; i < panelContainer.Controls.Count - 1; i++)
+                    panelContainer.Controls.RemoveAt(i);
+
+            panelContainer.Controls[0].BringToFront();
+            btnBack.Enabled = false;
+            panelMenu.Enabled = true;
+        }
+
         private void btnStudent_Click(object sender, EventArgs e)
         {
             MoveSidePanel(sender as Button);
-            //Extentions.AddFormIntoPanel(new Students(), panelContainer);
-            LoadNewForm(new Students(), "Students");
+            LoadNewForm(new ucStudents());
         }
 
         private void btnFinalTest_Click(object sender, EventArgs e)
         {
             MoveSidePanel(sender as Button);
-            //Extentions.AddFormIntoPanel(new FinalTest(), panelContainer);
-            LoadNewForm(new FinalTest(), "FinalTest");
-        }
-
-        private void BtnBack_Click(object sender, EventArgs e)
-        {
-            panelContainer.Controls[_formOpening].BringToFront();
-            btnBack.Visible = false;
+            LoadNewForm(new ucFinalTest());
         }
     }
 }
