@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
 using OBM.App.ViewModels;
 using OBM.Service;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OBM.App.Views
@@ -42,7 +37,7 @@ namespace OBM.App.Views
             var listFinalTest = FinalTestService.Ins.GetAll();
             var listFinalTestVM = Mapper.Map<List<FinalTestVM>>(listFinalTest);
             labTotal.Text = "Tổng: " + listFinalTestVM.Count();
-            
+
             foreach (var item in listFinalTestVM)
             {
                 TreeNode node = new TreeNode();

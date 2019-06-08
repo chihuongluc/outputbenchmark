@@ -1,15 +1,8 @@
 ﻿using AutoMapper;
-using OBM.App.Common;
 using OBM.App.ViewModels;
 using OBM.Service;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OBM.App.Views
@@ -71,12 +64,12 @@ namespace OBM.App.Views
         {
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                using (StudentDetails f = new StudentDetails())
-                {
-                    f.StudentID = dtgv.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    f.FormClosed += new FormClosedEventHandler(ReloadForm);
-                    f.ShowDialog();
-                }
+                //using (StudentDetails f = new StudentDetails())
+                //{
+                //    f.StudentID = dtgv.Rows[e.RowIndex].Cells[0].Value.ToString();
+                //    f.FormClosed += new FormClosedEventHandler(ReloadForm);
+                //    f.ShowDialog();
+                //}
             }
         }
     }

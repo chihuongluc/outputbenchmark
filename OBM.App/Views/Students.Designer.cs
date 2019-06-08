@@ -30,9 +30,9 @@ namespace OBM.App.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelControl = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgv = new OBM.App.Common.MyDataGridView();
@@ -66,7 +66,7 @@ namespace OBM.App.Views
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(950, 638);
+            this.panelControl.Size = new System.Drawing.Size(950, 649);
             this.panelControl.TabIndex = 0;
             // 
             // panel4
@@ -74,9 +74,9 @@ namespace OBM.App.Views
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.dtgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(10, 110);
+            this.panel4.Location = new System.Drawing.Point(10, 120);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(930, 468);
+            this.panel4.Size = new System.Drawing.Size(930, 469);
             this.panel4.TabIndex = 5;
             // 
             // dtgv
@@ -84,29 +84,29 @@ namespace OBM.App.Views
             this.dtgv.AllowUserToAddRows = false;
             this.dtgv.AllowUserToDeleteRows = false;
             this.dtgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgv.BackgroundColor = System.Drawing.Color.White;
             this.dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(113)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(113)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgv.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(192)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(192)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgv.EnableHeadersVisualStyles = false;
             this.dtgv.Location = new System.Drawing.Point(0, 0);
@@ -115,7 +115,7 @@ namespace OBM.App.Views
             this.dtgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgv.RowTemplate.Height = 28;
             this.dtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgv.Size = new System.Drawing.Size(930, 468);
+            this.dtgv.Size = new System.Drawing.Size(930, 469);
             this.dtgv.TabIndex = 0;
             this.dtgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_CellDoubleClick);
             // 
@@ -124,7 +124,7 @@ namespace OBM.App.Views
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.labTotal);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 578);
+            this.panel3.Location = new System.Drawing.Point(10, 589);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(930, 60);
             this.panel3.TabIndex = 5;
@@ -146,7 +146,7 @@ namespace OBM.App.Views
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.txbSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 50);
+            this.panel2.Location = new System.Drawing.Point(10, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 60);
             this.panel2.TabIndex = 4;
@@ -177,18 +177,18 @@ namespace OBM.App.Views
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(940, 50);
+            this.panel7.Location = new System.Drawing.Point(940, 60);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 588);
+            this.panel7.Size = new System.Drawing.Size(10, 589);
             this.panel7.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 588);
+            this.panel1.Size = new System.Drawing.Size(10, 589);
             this.panel1.TabIndex = 3;
             // 
             // panelTop
@@ -199,7 +199,7 @@ namespace OBM.App.Views
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 50);
+            this.panelTop.Size = new System.Drawing.Size(950, 60);
             this.panelTop.TabIndex = 2;
             // 
             // btnImportExcel
@@ -207,12 +207,12 @@ namespace OBM.App.Views
             this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
             this.btnImportExcel.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportExcel.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportExcel.ForeColor = System.Drawing.Color.Green;
             this.btnImportExcel.Image = global::OBM.App.Properties.Resources.Excel_24px;
-            this.btnImportExcel.Location = new System.Drawing.Point(566, 9);
+            this.btnImportExcel.Location = new System.Drawing.Point(574, 20);
             this.btnImportExcel.Name = "btnImportExcel";
-            this.btnImportExcel.Size = new System.Drawing.Size(182, 32);
+            this.btnImportExcel.Size = new System.Drawing.Size(185, 32);
             this.btnImportExcel.TabIndex = 15;
             this.btnImportExcel.Text = "Nhập vào từ excel";
             this.btnImportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,12 +224,12 @@ namespace OBM.App.Views
             this.btnDownloadTemplate.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnDownloadTemplate.FlatAppearance.BorderSize = 0;
             this.btnDownloadTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownloadTemplate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownloadTemplate.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDownloadTemplate.ForeColor = System.Drawing.Color.White;
             this.btnDownloadTemplate.Image = global::OBM.App.Properties.Resources.Download_24px;
-            this.btnDownloadTemplate.Location = new System.Drawing.Point(754, 9);
+            this.btnDownloadTemplate.Location = new System.Drawing.Point(765, 20);
             this.btnDownloadTemplate.Name = "btnDownloadTemplate";
-            this.btnDownloadTemplate.Size = new System.Drawing.Size(196, 32);
+            this.btnDownloadTemplate.Size = new System.Drawing.Size(185, 32);
             this.btnDownloadTemplate.TabIndex = 15;
             this.btnDownloadTemplate.Text = "Tải xuống mẫu excel";
             this.btnDownloadTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -239,11 +239,11 @@ namespace OBM.App.Views
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(10, 10);
+            this.label5.Location = new System.Drawing.Point(10, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 30);
+            this.label5.Size = new System.Drawing.Size(202, 32);
             this.label5.TabIndex = 14;
             this.label5.Text = "Quản lý sinh viên";
             // 
@@ -251,7 +251,7 @@ namespace OBM.App.Views
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(950, 638);
+            this.ClientSize = new System.Drawing.Size(950, 649);
             this.Controls.Add(this.panelControl);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
