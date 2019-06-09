@@ -16,7 +16,7 @@ namespace OBM.App.Views
     public partial class ucStudentDetails : UserControl
     {
         #region Properties
-        private string studentID;
+        private string studentID = null;
         public string StudentID { get => studentID; set => studentID = value; }
 
         private int ngayIndex;
@@ -41,38 +41,35 @@ namespace OBM.App.Views
 
         private void UcStudentDetails_Load(object sender, EventArgs e)
         {
-            var student = StudentService.Ins.GetSingleByID(studentID);
-            var studentVM = Mapper.Map<StudentVM>(student);
-
-            string fullname = studentVM.LastName + " " + studentVM.FirstName;
-            string mobile = studentVM.Mobile;
-            string email = studentVM.Email;
-            string gender = studentVM.Gender;
-            string course = studentVM.Course;
-            string birthday = studentVM.Birthday;
-            string birthplace = studentVM.Birthplace;
-
-            labTitle.Text = "SV " + fullname;
-            txbStudentID.Text = studentID;
-            txbFullname.Text = fullname;
-            txbCourse.Text = course;
-            txbMobile.Text = mobile;
-            txbEmail.Text = email;
-            cbGender.Text = gender;
-            cbBirthplace.Text = birthplace;
-            if (birthday.Length > 4)
+            if (!string.IsNullOrEmpty(studentID))
             {
-                string day = birthday.Substring(0, 2);
-                cbDay.Text = day.IndexOf("0") == 0 ? day.Substring(1, 1) : day;
-                string month = birthday.Substring(3, 2);
-                cbMonth.Text = month.IndexOf("0") == 0 ? month.Substring(1, 1) : month;
-                cbYear.Text = birthday.Substring(6, 4);
-            }
-            else
-            {
-                cbYear.Text = birthday;
-                cbMonth.SelectedIndex = 0;
-                cbDay.SelectedIndex = 0;
+                var student = StudentService.Ins.GetSingleByID(studentID);
+                var studentVM = Mapper.Map<StudentVM>(student);
+
+                string fullname = studentVM.LastName + " " + studentVM.FirstName;
+                string birthday = studentVM.Birthday;
+                txbStudentID.Text = studentID;
+                labTitle.Text = "SV " + fullname;
+                txbFullname.Text = fullname;
+                txbCourse.Text = studentVM.Course;
+                txbMobile.Text = studentVM.Mobile;
+                txbEmail.Text = studentVM.Email;
+                cbGender.Text = studentVM.Gender;
+                cbBirthplace.Text = studentVM.Birthplace;
+                if (birthday.Length > 4)
+                {
+                    string day = birthday.Substring(0, 2);
+                    cbDay.Text = day.IndexOf("0") == 0 ? day.Substring(1, 1) : day;
+                    string month = birthday.Substring(3, 2);
+                    cbMonth.Text = month.IndexOf("0") == 0 ? month.Substring(1, 1) : month;
+                    cbYear.Text = birthday.Substring(6, 4);
+                }
+                else
+                {
+                    cbYear.Text = birthday;
+                    cbMonth.SelectedIndex = 0;
+                    cbDay.SelectedIndex = 0;
+                }
             }
         }
 
@@ -237,7 +234,7 @@ namespace OBM.App.Views
 
             ngayIndex = (sender as ComboBox).SelectedIndex;
         }
-#endregion
+        #endregion
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {

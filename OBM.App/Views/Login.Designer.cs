@@ -42,7 +42,7 @@ namespace OBM.App.Views
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.label2.Location = new System.Drawing.Point(46, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 23);
@@ -69,7 +69,7 @@ namespace OBM.App.Views
             this.chkShowPass.AutoSize = true;
             this.chkShowPass.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkShowPass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPass.ForeColor = System.Drawing.Color.DimGray;
+            this.chkShowPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.chkShowPass.Location = new System.Drawing.Point(222, 135);
             this.chkShowPass.Name = "chkShowPass";
             this.chkShowPass.Size = new System.Drawing.Size(128, 21);
@@ -96,6 +96,7 @@ namespace OBM.App.Views
             // txbPassword
             // 
             this.txbPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.txbPassword.Location = new System.Drawing.Point(50, 100);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.Size = new System.Drawing.Size(300, 29);
@@ -107,6 +108,7 @@ namespace OBM.App.Views
             // txbUserName
             // 
             this.txbUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.txbUserName.Location = new System.Drawing.Point(50, 50);
             this.txbUserName.Name = "txbUserName";
             this.txbUserName.Size = new System.Drawing.Size(300, 29);

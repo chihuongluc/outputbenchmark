@@ -52,6 +52,7 @@ namespace OBM.App.Views
             // 
             this.panelControl.BackColor = System.Drawing.Color.Gainsboro;
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.panelControl.Location = new System.Drawing.Point(300, 120);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(400, 280);
@@ -77,7 +78,7 @@ namespace OBM.App.Views
             this.btnSettingDatabase.FlatAppearance.BorderSize = 0;
             this.btnSettingDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettingDatabase.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettingDatabase.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSettingDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.btnSettingDatabase.Image = global::OBM.App.Properties.Resources.icons8_Database_Administrator_24px;
             this.btnSettingDatabase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettingDatabase.Location = new System.Drawing.Point(50, 77);
@@ -124,7 +125,7 @@ namespace OBM.App.Views
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.label2.Location = new System.Drawing.Point(45, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 30);
@@ -133,7 +134,7 @@ namespace OBM.App.Views
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(192)))), ((int)(((byte)(45)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);

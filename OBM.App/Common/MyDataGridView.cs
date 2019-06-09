@@ -10,10 +10,11 @@ namespace OBM.App.Common
             AllowUserToAddRows = false;
             AllowUserToDeleteRows = false;
             AllowUserToResizeRows = false;
-            ColumnHeadersHeight = 28;
+            ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            ColumnHeadersHeight = 36; // chiều cao column header
             RowHeadersVisible = false;
             RowTemplate.DefaultCellStyle.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            RowTemplate.Height = 28;
+            RowTemplate.Height = 34; // chiều cao của các dòng
             SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             //// Set độ rộng mặc định cho các column
@@ -37,17 +38,18 @@ namespace OBM.App.Common
 
             // Setting Cell style
             BorderStyle = BorderStyle.None;
-            AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            AlternatingRowsDefaultCellStyle.BackColor = Color.White; // màu background mặc định
             CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DefaultCellStyle.SelectionBackColor = Color.FromArgb(251, 192, 45); // vàng nhạt
-            DefaultCellStyle.SelectionForeColor = Color.White;
-            BackgroundColor = Color.White;
+            DefaultCellStyle.SelectionBackColor = Color.Gainsboro; // màu background khi chọn vào 1 row
+            DefaultCellStyle.SelectionForeColor = Color.FromArgb(66, 66, 66); // màu chữ khi chọn vào 1 row
+            BackgroundColor = Color.White; // màu background khi không được chọn
+            ForeColor = Color.FromArgb(66, 66, 66); // màu chữ khi không được chọn
 
             // Setting Column header
             EnableHeadersVisualStyles = false;
             ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(198, 113, 0); // vàng đậm
-            ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(99, 99, 99); // màu background column header
+            ColumnHeadersDefaultCellStyle.ForeColor = Color.White; // màu chữ column header
             ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
         }
     }
