@@ -24,11 +24,16 @@ namespace OBM.App.Views
         private void LoadForm()
         {
             LoadTreeViewFinalTest();
-            LoadTreeViewSubject();
-            ResizeVerticalScrollBarOnFlowLayoutPanel(panelFinalTest, fpanelFinalTest);
+            ResizeVerticalScrollBar(pnlFinalTest, flpFinalTest);
+            ResizeVerticalScrollBar(pnlSchedule, flpSchedule);
         }
 
-        private void ResizeVerticalScrollBarOnFlowLayoutPanel(Control pnl, Control fpnl)
+        /// <summary>
+        /// Hàm thu nhỏ Scroll bar
+        /// </summary>
+        /// <param name="pnl">Panel cha</param>
+        /// <param name="fpnl">FlowLayoutPanel con</param>
+        private void ResizeVerticalScrollBar(Control pnl, Control fpnl)
         {
             fpnl.Parent = pnl;
             fpnl.Location = new Point(0, 0);
@@ -41,69 +46,79 @@ namespace OBM.App.Views
             tvFinalTest.AfterSelect += TvFinalTest_AfterSelect;
             var listFinalTest = FinalTestService.Ins.GetAll();
             var listFinalTestVM = Mapper.Map<List<FinalTestVM>>(listFinalTest);
-            labTotal.Text = "Tổng: " + listFinalTestVM.Count();
+            labTotalFinalTest.Text = "Tổng: " + listFinalTestVM.Count();
 
             foreach (var item in listFinalTestVM)
             {
-                TreeNode node = new TreeNode();
-                node.Text = "Kỳ thi KTNL chuẩn đầu ra " + item.StartDate.ToString("dd/MM/yyyy");
-                node.Tag = item.ID;
-                node.Checked = true;
-                tvFinalTest.Nodes.Add(node);
+                TreeNode root = new TreeNode();
+                root.Text = "Kỳ thi KTNL CĐR " + item.StartDate.ToString("dd/MM/yyyy");
+                root.Tag = item.ID;
+                root.Checked = true;
+
+                TreeNode startDate = new TreeNode() { Text = "Ngày bắt đầu: " + item.StartDate.ToString("dd/MM/yyyy") };
+                TreeNode endDate = new TreeNode() { Text = "Ngày kết thúc: " + (item.EndDate.HasValue ? item.EndDate.Value.ToString("dd/MM/yyyy") : "...") };
+                TreeNode times = new TreeNode() { Text = "Đợt: " + (item.Times.HasValue ? item.Times.ToString() : "...") };
+                TreeNode done = new TreeNode() { Text = "Trạng thái: " + (item.Done ? "Đã hoàn thành" : "Chưa hoàn thành") };
+                root.Nodes.Add(startDate);
+                root.Nodes.Add(endDate);
+                root.Nodes.Add(times);
+                root.Nodes.Add(done);
+                tvFinalTest.Nodes.Add(root);
             }
             tvFinalTest.SelectedNode = tvFinalTest.Nodes[0];
         }
 
-        private void LoadTreeViewSubject()
+        private void LoadSchedule(string finalTestID)
         {
-            tvSubject.CheckBoxes = true;
-            tvSubject.NodeMouseClick += TvSubject_NodeMouseClick;
-            var listSubject = SubjectService.Ins.GetAll();
-            var listSubjectVM = Mapper.Map<List<SubjectVM>>(listSubject);
+            var listSchedule = ScheduleService.Ins.GetByFinalTestID(finalTestID);
+            var listScheduleVM = Mapper.Map<List<ScheduleVM>>(listSchedule);
+            labTotalSchedule.Text = "Tổng: " + listScheduleVM.Count();
 
-            foreach (var item in listSubjectVM)
+            foreach (var item in listScheduleVM)
             {
-                TreeNode node = new TreeNode();
-                node.Text = "  " + item.Name;
-                node.Tag = item.ID;
-                tvSubject.Nodes.Add(node);
+                ucSchedule uc = new ucSchedule();
+                uc.Date = item.TestDate;
+                uc.Time = item.TestTime;
+                uc.Subject = item.Subject.Name;
+                uc.Room = item.Room.Name;
+                flpSchedule.Controls.Add(uc);
             }
         }
 
         private void TvFinalTest_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            // Nếu không phải nút cha thì return
+            if (e.Node.Tag == null)
+                return;
+
+            // Xoá tất cả controls đang có trong flp
+            if (flpSchedule.Controls.Count > 0)
+                flpSchedule.Controls.Clear();
+
+            // Load lại các controls mới vào flp theo finalTestID
             string finalTestID = e.Node.Tag.ToString();
-            string name = e.Node.Text.ToString();
-
-            var finalTest = FinalTestService.Ins.GetSingleByID(finalTestID);
-            var finalTestVM = Mapper.Map<FinalTestVM>(finalTest);
-            string startDate = finalTestVM.StartDate.ToString("dd/MM/yyyy");
-            string endDate = finalTestVM.EndDate.HasValue ? finalTestVM.EndDate.Value.ToString("dd/MM/yyyy") : "";
-            string times = finalTestVM.Times.ToString();
-            string done = finalTestVM.Done ? "Đã hoàn thành" : "Chưa hoàn thành";
-
-            labName.Text = name;
-            labStartDate.Text = "Ngày bắt đầu: " + startDate;
-            labEndDate.Text = "Ngày kết thúc: " + endDate;
-            labTimes.Text = "Đợt: " + times;
-            labStatus.Text = "Trạng thái: " + done;
-        }
-
-        private void TvSubject_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            e.Node.Checked = !e.Node.Checked;
+            labScheduleTitle.Text = "Lịch thi " + e.Node.Text;
+            LoadSchedule(finalTestID);
         }
 
         private void BtnAddFinalTest_Click(object sender, EventArgs e)
         {
-            if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("UCTest"))
+
+        }
+
+        private void BtnScheduleDetails_Click(object sender, EventArgs e)
+        {
+            // UserControl chưa từng được mở thì thêm mới vào
+            if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("ucScheduleDetails"))
             {
-                ucTest uc = new ucTest();
+                ucScheduleDetails uc = new ucScheduleDetails();
                 uc.Dock = DockStyle.Fill;
                 Dashboard.Instance.PnlContainer.Controls.Add(uc);
             }
-            Dashboard.Instance.PnlContainer.Controls["UCTest"].BringToFront();
-            Dashboard.Instance.BackButton.Enabled = true;
+
+            // Hiển thị UserControl
+            Dashboard.Instance.PnlContainer.Controls["ucScheduleDetails"].BringToFront();
+            Dashboard.Instance.BackButton.Visible = true;
             Dashboard.Instance.PnlMenu.Enabled = false;
         }
     }

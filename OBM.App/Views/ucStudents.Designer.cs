@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelTop = new System.Windows.Forms.Panel();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.btnImportExcel = new System.Windows.Forms.Button();
             this.btnDownloadTemplate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,23 +44,23 @@
             this.labTotal = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dtgv = new OBM.App.Common.MyDataGridView();
-            this.panelTop.SuspendLayout();
+            this.pnlTop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelTop
+            // pnlTop
             // 
-            this.panelTop.Controls.Add(this.btnImportExcel);
-            this.panelTop.Controls.Add(this.btnDownloadTemplate);
-            this.panelTop.Controls.Add(this.label5);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 60);
-            this.panelTop.TabIndex = 3;
+            this.pnlTop.Controls.Add(this.btnImportExcel);
+            this.pnlTop.Controls.Add(this.btnDownloadTemplate);
+            this.pnlTop.Controls.Add(this.label5);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(950, 60);
+            this.pnlTop.TabIndex = 3;
             // 
             // btnImportExcel
             // 
@@ -173,7 +173,7 @@
             this.labTotal.AutoSize = true;
             this.labTotal.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTotal.ForeColor = System.Drawing.Color.DimGray;
-            this.labTotal.Location = new System.Drawing.Point(6, 20);
+            this.labTotal.Location = new System.Drawing.Point(10, 20);
             this.labTotal.Name = "labTotal";
             this.labTotal.Size = new System.Drawing.Size(43, 20);
             this.labTotal.TabIndex = 19;
@@ -239,12 +239,12 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.pnlTop);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ucStudents";
             this.Size = new System.Drawing.Size(950, 649);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -257,7 +257,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Button btnImportExcel;
         private System.Windows.Forms.Button btnDownloadTemplate;
         private System.Windows.Forms.Label label5;

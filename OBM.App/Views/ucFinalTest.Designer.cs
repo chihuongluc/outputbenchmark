@@ -28,65 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucFinalTest));
-            this.panelTop = new System.Windows.Forms.Panel();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelFinalTest = new System.Windows.Forms.Panel();
-            this.fpanelFinalTest = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlFinalTest = new System.Windows.Forms.Panel();
+            this.flpFinalTest = new System.Windows.Forms.FlowLayoutPanel();
             this.tvFinalTest = new System.Windows.Forms.TreeView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.labTotal = new System.Windows.Forms.Label();
-            this.mySeparator3 = new OBM.App.Common.MySeparator();
+            this.labTotalFinalTest = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAddFinalTest = new System.Windows.Forms.Button();
             this.btnCloseFinalTest = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.mySeparator1 = new OBM.App.Common.MySeparator();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.tvSubject = new System.Windows.Forms.TreeView();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labStatus = new System.Windows.Forms.Label();
-            this.labTimes = new System.Windows.Forms.Label();
-            this.labEndDate = new System.Windows.Forms.Label();
-            this.labStartDate = new System.Windows.Forms.Label();
-            this.labName = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.mySeparator4 = new OBM.App.Common.MySeparator();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnScheduleDetails = new System.Windows.Forms.Button();
+            this.labScheduleTitle = new System.Windows.Forms.Label();
+            this.pnlSchedule = new System.Windows.Forms.Panel();
+            this.flpSchedule = new System.Windows.Forms.FlowLayoutPanel();
+            this.labTotalSchedule = new System.Windows.Forms.Label();
+            this.mySeparator4 = new OBM.App.Common.MySeparator();
             this.mySeparator2 = new OBM.App.Common.MySeparator();
-            this.panelTop.SuspendLayout();
+            this.mySeparator3 = new OBM.App.Common.MySeparator();
+            this.mySeparator1 = new OBM.App.Common.MySeparator();
+            this.pnlTop.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panelFinalTest.SuspendLayout();
-            this.fpanelFinalTest.SuspendLayout();
+            this.pnlFinalTest.SuspendLayout();
+            this.flpFinalTest.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.pnlSchedule.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelTop
+            // pnlTop
             // 
-            this.panelTop.Controls.Add(this.label5);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 60);
-            this.panelTop.TabIndex = 4;
+            this.pnlTop.Controls.Add(this.label5);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(950, 60);
+            this.pnlTop.TabIndex = 4;
             // 
             // label5
             // 
@@ -118,7 +110,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panelFinalTest);
+            this.panel3.Controls.Add(this.pnlFinalTest);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel7);
@@ -129,26 +121,26 @@
             this.panel3.Size = new System.Drawing.Size(455, 589);
             this.panel3.TabIndex = 7;
             // 
-            // panelFinalTest
+            // pnlFinalTest
             // 
-            this.panelFinalTest.Controls.Add(this.fpanelFinalTest);
-            this.panelFinalTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFinalTest.Location = new System.Drawing.Point(40, 90);
-            this.panelFinalTest.Name = "panelFinalTest";
-            this.panelFinalTest.Size = new System.Drawing.Size(375, 439);
-            this.panelFinalTest.TabIndex = 3;
+            this.pnlFinalTest.Controls.Add(this.flpFinalTest);
+            this.pnlFinalTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFinalTest.Location = new System.Drawing.Point(40, 90);
+            this.pnlFinalTest.Name = "pnlFinalTest";
+            this.pnlFinalTest.Size = new System.Drawing.Size(375, 439);
+            this.pnlFinalTest.TabIndex = 3;
             // 
-            // fpanelFinalTest
+            // flpFinalTest
             // 
-            this.fpanelFinalTest.AutoScroll = true;
-            this.fpanelFinalTest.Controls.Add(this.tvFinalTest);
-            this.fpanelFinalTest.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fpanelFinalTest.Location = new System.Drawing.Point(0, 0);
-            this.fpanelFinalTest.Margin = new System.Windows.Forms.Padding(0);
-            this.fpanelFinalTest.Name = "fpanelFinalTest";
-            this.fpanelFinalTest.Size = new System.Drawing.Size(375, 438);
-            this.fpanelFinalTest.TabIndex = 0;
-            this.fpanelFinalTest.WrapContents = false;
+            this.flpFinalTest.AutoScroll = true;
+            this.flpFinalTest.Controls.Add(this.tvFinalTest);
+            this.flpFinalTest.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpFinalTest.Location = new System.Drawing.Point(0, 0);
+            this.flpFinalTest.Margin = new System.Windows.Forms.Padding(0);
+            this.flpFinalTest.Name = "flpFinalTest";
+            this.flpFinalTest.Size = new System.Drawing.Size(375, 438);
+            this.flpFinalTest.TabIndex = 0;
+            this.flpFinalTest.WrapContents = false;
             // 
             // tvFinalTest
             // 
@@ -183,7 +175,7 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.labTotal);
+            this.panel7.Controls.Add(this.labTotalFinalTest);
             this.panel7.Controls.Add(this.mySeparator3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 529);
@@ -191,27 +183,16 @@
             this.panel7.Size = new System.Drawing.Size(455, 60);
             this.panel7.TabIndex = 1;
             // 
-            // labTotal
+            // labTotalFinalTest
             // 
-            this.labTotal.AutoSize = true;
-            this.labTotal.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTotal.ForeColor = System.Drawing.Color.DimGray;
-            this.labTotal.Location = new System.Drawing.Point(10, 20);
-            this.labTotal.Name = "labTotal";
-            this.labTotal.Size = new System.Drawing.Size(46, 20);
-            this.labTotal.TabIndex = 18;
-            this.labTotal.Text = "Tổng:";
-            // 
-            // mySeparator3
-            // 
-            this.mySeparator3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.mySeparator3.isVertical = false;
-            this.mySeparator3.Location = new System.Drawing.Point(0, 0);
-            this.mySeparator3.Name = "mySeparator3";
-            this.mySeparator3.Size = new System.Drawing.Size(455, 23);
-            this.mySeparator3.TabIndex = 17;
-            this.mySeparator3.Text = "mySeparator3";
-            this.mySeparator3.Thickness = 1;
+            this.labTotalFinalTest.AutoSize = true;
+            this.labTotalFinalTest.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTotalFinalTest.ForeColor = System.Drawing.Color.DimGray;
+            this.labTotalFinalTest.Location = new System.Drawing.Point(10, 20);
+            this.labTotalFinalTest.Name = "labTotalFinalTest";
+            this.labTotalFinalTest.Size = new System.Drawing.Size(46, 20);
+            this.labTotalFinalTest.TabIndex = 18;
+            this.labTotalFinalTest.Text = "Tổng:";
             // 
             // panel6
             // 
@@ -271,17 +252,6 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Danh sách kỳ thi";
             // 
-            // mySeparator1
-            // 
-            this.mySeparator1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.mySeparator1.isVertical = false;
-            this.mySeparator1.Location = new System.Drawing.Point(0, 50);
-            this.mySeparator1.Name = "mySeparator1";
-            this.mySeparator1.Size = new System.Drawing.Size(455, 23);
-            this.mySeparator1.TabIndex = 16;
-            this.mySeparator1.Text = "mySeparator1";
-            this.mySeparator1.Thickness = 1;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
@@ -294,8 +264,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.panel14);
-            this.panel5.Controls.Add(this.panel15);
+            this.panel5.Controls.Add(this.pnlSchedule);
             this.panel5.Controls.Add(this.panel13);
             this.panel5.Controls.Add(this.panel12);
             this.panel5.Controls.Add(this.panel11);
@@ -306,113 +275,9 @@
             this.panel5.Size = new System.Drawing.Size(455, 589);
             this.panel5.TabIndex = 9;
             // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.tvSubject);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(40, 372);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(375, 157);
-            this.panel14.TabIndex = 6;
-            // 
-            // tvSubject
-            // 
-            this.tvSubject.BackColor = System.Drawing.Color.White;
-            this.tvSubject.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tvSubject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tvSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.tvSubject.FullRowSelect = true;
-            this.tvSubject.ItemHeight = 32;
-            this.tvSubject.LineColor = System.Drawing.Color.White;
-            this.tvSubject.Location = new System.Drawing.Point(0, 0);
-            this.tvSubject.Name = "tvSubject";
-            this.tvSubject.Scrollable = false;
-            this.tvSubject.ShowLines = false;
-            this.tvSubject.Size = new System.Drawing.Size(375, 157);
-            this.tvSubject.TabIndex = 0;
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.label8);
-            this.panel15.Controls.Add(this.labStatus);
-            this.panel15.Controls.Add(this.labTimes);
-            this.panel15.Controls.Add(this.labEndDate);
-            this.panel15.Controls.Add(this.labStartDate);
-            this.panel15.Controls.Add(this.labName);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(40, 90);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(375, 282);
-            this.panel15.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label8.Location = new System.Drawing.Point(6, 245);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 23);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Môn thi";
-            // 
-            // labStatus
-            // 
-            this.labStatus.AutoSize = true;
-            this.labStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.labStatus.Location = new System.Drawing.Point(6, 175);
-            this.labStatus.Name = "labStatus";
-            this.labStatus.Size = new System.Drawing.Size(82, 21);
-            this.labStatus.TabIndex = 18;
-            this.labStatus.Text = "Trạng thái:";
-            // 
-            // labTimes
-            // 
-            this.labTimes.AutoSize = true;
-            this.labTimes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTimes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.labTimes.Location = new System.Drawing.Point(6, 133);
-            this.labTimes.Name = "labTimes";
-            this.labTimes.Size = new System.Drawing.Size(39, 21);
-            this.labTimes.TabIndex = 18;
-            this.labTimes.Text = "Đợt:";
-            // 
-            // labEndDate
-            // 
-            this.labEndDate.AutoSize = true;
-            this.labEndDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEndDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.labEndDate.Location = new System.Drawing.Point(6, 91);
-            this.labEndDate.Name = "labEndDate";
-            this.labEndDate.Size = new System.Drawing.Size(109, 21);
-            this.labEndDate.TabIndex = 18;
-            this.labEndDate.Text = "Ngày kết thúc:";
-            // 
-            // labStartDate
-            // 
-            this.labStartDate.AutoSize = true;
-            this.labStartDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.labStartDate.Location = new System.Drawing.Point(6, 49);
-            this.labStartDate.Name = "labStartDate";
-            this.labStartDate.Size = new System.Drawing.Size(106, 21);
-            this.labStartDate.TabIndex = 18;
-            this.labStartDate.Text = "Ngày bắt đầu:";
-            // 
-            // labName
-            // 
-            this.labName.AutoSize = true;
-            this.labName.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.labName.Location = new System.Drawing.Point(6, 5);
-            this.labName.Name = "labName";
-            this.labName.Size = new System.Drawing.Size(36, 23);
-            this.labName.TabIndex = 18;
-            this.labName.Text = "Tên";
-            // 
             // panel13
             // 
+            this.panel13.BackColor = System.Drawing.Color.White;
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(0, 90);
             this.panel13.Name = "panel13";
@@ -421,14 +286,16 @@
             // 
             // panel12
             // 
+            this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(415, 90);
+            this.panel12.Location = new System.Drawing.Point(430, 90);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(40, 439);
+            this.panel12.Size = new System.Drawing.Size(25, 439);
             this.panel12.TabIndex = 3;
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.labTotalSchedule);
             this.panel11.Controls.Add(this.mySeparator4);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 529);
@@ -436,8 +303,77 @@
             this.panel11.Size = new System.Drawing.Size(455, 60);
             this.panel11.TabIndex = 2;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnScheduleDetails);
+            this.panel10.Controls.Add(this.labScheduleTitle);
+            this.panel10.Controls.Add(this.mySeparator2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(455, 90);
+            this.panel10.TabIndex = 1;
+            // 
+            // btnScheduleDetails
+            // 
+            this.btnScheduleDetails.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnScheduleDetails.FlatAppearance.BorderSize = 0;
+            this.btnScheduleDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScheduleDetails.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduleDetails.ForeColor = System.Drawing.Color.White;
+            this.btnScheduleDetails.Image = global::OBM.App.Properties.Resources.Addnew_24px;
+            this.btnScheduleDetails.Location = new System.Drawing.Point(290, 15);
+            this.btnScheduleDetails.Name = "btnScheduleDetails";
+            this.btnScheduleDetails.Size = new System.Drawing.Size(150, 32);
+            this.btnScheduleDetails.TabIndex = 18;
+            this.btnScheduleDetails.Text = "Thêm/Cập nhật";
+            this.btnScheduleDetails.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnScheduleDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnScheduleDetails.UseVisualStyleBackColor = false;
+            this.btnScheduleDetails.Click += new System.EventHandler(this.BtnScheduleDetails_Click);
+            // 
+            // labScheduleTitle
+            // 
+            this.labScheduleTitle.AutoSize = true;
+            this.labScheduleTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labScheduleTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.labScheduleTitle.Location = new System.Drawing.Point(10, 20);
+            this.labScheduleTitle.Name = "labScheduleTitle";
+            this.labScheduleTitle.Size = new System.Drawing.Size(65, 23);
+            this.labScheduleTitle.TabIndex = 17;
+            this.labScheduleTitle.Text = "Lịch thi";
+            // 
+            // pnlSchedule
+            // 
+            this.pnlSchedule.Controls.Add(this.flpSchedule);
+            this.pnlSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSchedule.Location = new System.Drawing.Point(40, 90);
+            this.pnlSchedule.Name = "pnlSchedule";
+            this.pnlSchedule.Size = new System.Drawing.Size(390, 439);
+            this.pnlSchedule.TabIndex = 5;
+            // 
+            // flpSchedule
+            // 
+            this.flpSchedule.AutoScroll = true;
+            this.flpSchedule.Location = new System.Drawing.Point(0, 0);
+            this.flpSchedule.Name = "flpSchedule";
+            this.flpSchedule.Size = new System.Drawing.Size(390, 438);
+            this.flpSchedule.TabIndex = 0;
+            // 
+            // labTotalSchedule
+            // 
+            this.labTotalSchedule.AutoSize = true;
+            this.labTotalSchedule.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTotalSchedule.ForeColor = System.Drawing.Color.DimGray;
+            this.labTotalSchedule.Location = new System.Drawing.Point(10, 20);
+            this.labTotalSchedule.Name = "labTotalSchedule";
+            this.labTotalSchedule.Size = new System.Drawing.Size(46, 20);
+            this.labTotalSchedule.TabIndex = 18;
+            this.labTotalSchedule.Text = "Tổng:";
+            // 
             // mySeparator4
             // 
+            this.mySeparator4.Dock = System.Windows.Forms.DockStyle.Top;
             this.mySeparator4.ForeColor = System.Drawing.Color.Gainsboro;
             this.mySeparator4.isVertical = false;
             this.mySeparator4.Location = new System.Drawing.Point(0, 0);
@@ -446,45 +382,6 @@
             this.mySeparator4.TabIndex = 17;
             this.mySeparator4.Text = "mySeparator4";
             this.mySeparator4.Thickness = 1;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btnSave);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Controls.Add(this.mySeparator2);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(455, 90);
-            this.panel10.TabIndex = 1;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(320, 15);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 32);
-            this.btnSave.TabIndex = 18;
-            this.btnSave.Text = "Lưu tất cả";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(10, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Chi tiết kỳ thi";
             // 
             // mySeparator2
             // 
@@ -497,6 +394,29 @@
             this.mySeparator2.Text = "mySeparator2";
             this.mySeparator2.Thickness = 1;
             // 
+            // mySeparator3
+            // 
+            this.mySeparator3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mySeparator3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mySeparator3.isVertical = false;
+            this.mySeparator3.Location = new System.Drawing.Point(0, 0);
+            this.mySeparator3.Name = "mySeparator3";
+            this.mySeparator3.Size = new System.Drawing.Size(455, 23);
+            this.mySeparator3.TabIndex = 17;
+            this.mySeparator3.Text = "mySeparator3";
+            this.mySeparator3.Thickness = 1;
+            // 
+            // mySeparator1
+            // 
+            this.mySeparator1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mySeparator1.isVertical = false;
+            this.mySeparator1.Location = new System.Drawing.Point(0, 50);
+            this.mySeparator1.Name = "mySeparator1";
+            this.mySeparator1.Size = new System.Drawing.Size(455, 23);
+            this.mySeparator1.TabIndex = 16;
+            this.mySeparator1.Text = "mySeparator1";
+            this.mySeparator1.Thickness = 1;
+            // 
             // ucFinalTest
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -506,44 +426,43 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.pnlTop);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ucFinalTest";
             this.Size = new System.Drawing.Size(950, 649);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panelFinalTest.ResumeLayout(false);
-            this.fpanelFinalTest.ResumeLayout(false);
+            this.pnlFinalTest.ResumeLayout(false);
+            this.flpFinalTest.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.pnlSchedule.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panelFinalTest;
-        private System.Windows.Forms.FlowLayoutPanel fpanelFinalTest;
+        private System.Windows.Forms.Panel pnlFinalTest;
+        private System.Windows.Forms.FlowLayoutPanel flpFinalTest;
         private System.Windows.Forms.TreeView tvFinalTest;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label labTotal;
+        private System.Windows.Forms.Label labTotalFinalTest;
         private Common.MySeparator mySeparator3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnAddFinalTest;
@@ -552,22 +471,16 @@
         private Common.MySeparator mySeparator1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TreeView tvSubject;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labStatus;
-        private System.Windows.Forms.Label labTimes;
-        private System.Windows.Forms.Label labEndDate;
-        private System.Windows.Forms.Label labStartDate;
-        private System.Windows.Forms.Label labName;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
         private Common.MySeparator mySeparator4;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnScheduleDetails;
+        private System.Windows.Forms.Label labScheduleTitle;
         private Common.MySeparator mySeparator2;
+        private System.Windows.Forms.Panel pnlSchedule;
+        private System.Windows.Forms.FlowLayoutPanel flpSchedule;
+        private System.Windows.Forms.Label labTotalSchedule;
     }
 }

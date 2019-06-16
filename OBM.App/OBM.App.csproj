@@ -121,29 +121,29 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FinalTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FinalTest.Designer.cs">
-      <DependentUpon>FinalTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Students.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Students.Designer.cs">
-      <DependentUpon>Students.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\ucFinalTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ucFinalTest.Designer.cs">
       <DependentUpon>ucFinalTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucSchedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucSchedule.Designer.cs">
+      <DependentUpon>ucSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucScheduleDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ucScheduleDetails.Designer.cs">
+      <DependentUpon>ucScheduleDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ucStudentDetails.cs">
       <SubType>UserControl</SubType>
@@ -156,12 +156,6 @@
     </Compile>
     <Compile Include="Views\ucStudents.Designer.cs">
       <DependentUpon>ucStudents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ucTest.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\ucTest.Designer.cs">
-      <DependentUpon>ucTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Welcome.cs">
       <SubType>Form</SubType>
@@ -177,26 +171,23 @@
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FinalTest.resx">
-      <DependentUpon>FinalTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Students.resx">
-      <DependentUpon>Students.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\ucFinalTest.resx">
       <DependentUpon>ucFinalTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucSchedule.resx">
+      <DependentUpon>ucSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ucScheduleDetails.resx">
+      <DependentUpon>ucScheduleDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucStudentDetails.resx">
       <DependentUpon>ucStudentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucStudents.resx">
       <DependentUpon>ucStudents.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucTest.resx">
-      <DependentUpon>ucTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

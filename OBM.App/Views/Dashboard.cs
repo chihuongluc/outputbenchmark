@@ -30,14 +30,14 @@ namespace OBM.App.Views
 
         public Panel PnlContainer
         {
-            get { return panelContainer; }
-            set { panelContainer = value; }
+            get { return pnlContainer; }
+            set { pnlContainer = value; }
         }
 
         public Panel PnlMenu
         {
-            get { return panelMenu; }
-            set { panelMenu = value; }
+            get { return pnlMenu; }
+            set { pnlMenu = value; }
         }
 
         public Button BackButton
@@ -54,7 +54,7 @@ namespace OBM.App.Views
         }
 
         /// <summary>
-        /// Set Border style 3D cho Form
+        /// Hàm set style border 3D cho Form
         /// </summary>
         protected override CreateParams CreateParams
         {
@@ -68,20 +68,27 @@ namespace OBM.App.Views
 
         private void LoadNewForm(UserControl uc)
         {
-            if (panelContainer.Controls.Count > 0)
-                for (int i = 0; i < panelContainer.Controls.Count; i++)
-                    panelContainer.Controls.RemoveAt(i);
+            // Xoá tất cả UserControls đang có trong panel chính
+            if (pnlContainer.Controls.Count > 0)
+                pnlContainer.Controls.Clear();
 
+            // Thêm UserControl được gọi vào panel chính
             uc.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(uc);
-            btnBack.Enabled = false;
-            panelMenu.Enabled = true;
+            pnlContainer.Controls.Add(uc);
+
+            // Ẩn button Back và enable pnlMenu
+            btnBack.Visible = false;
+            pnlMenu.Enabled = true;
         }
 
+        /// <summary>
+        /// Hàm di chuyển panel đánh dấu khi click vào một chức năng trên pnlMenu
+        /// </summary>
+        /// <param name="btn"></param>
         private void MoveSidePanel(Control btn)
         {
-            panelSide.Top = btn.Top;
-            panelSide.Height = btn.Height;
+            pnlSide.Top = btn.Top;
+            pnlSide.Height = btn.Height;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -99,13 +106,15 @@ namespace OBM.App.Views
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            if (panelContainer.Controls.Count > 0)
-                for (int i = 0; i < panelContainer.Controls.Count - 1; i++)
-                    panelContainer.Controls.RemoveAt(i);
+            // Xoá các UserControls con nhưng giữ lại UserControl cha
+            if (pnlContainer.Controls.Count > 0)
+                for (int i = 0; i < pnlContainer.Controls.Count - 1; i++)
+                    pnlContainer.Controls.RemoveAt(i);
 
-            panelContainer.Controls[0].BringToFront();
-            btnBack.Enabled = false;
-            panelMenu.Enabled = true;
+            // Hiển thị lại UserControl cha và giữ nguyên trạng thái trước đó
+            pnlContainer.Controls[0].BringToFront();
+            btnBack.Visible = false;
+            pnlMenu.Enabled = true;
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
@@ -118,6 +127,18 @@ namespace OBM.App.Views
         {
             MoveSidePanel(sender as Button);
             LoadNewForm(new ucFinalTest());
+        }
+
+        private void BtnScore_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(sender as Button);
+            //LoadNewForm(new ucSchedule());
+        }
+
+        private void BtnAccount_Click(object sender, EventArgs e)
+        {
+            MoveSidePanel(sender as Button);
+            //LoadNewForm(new ucSchedule());
         }
     }
 }

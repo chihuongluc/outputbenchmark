@@ -50,7 +50,7 @@ namespace OBM.App.Views
             string[] colHeader = { "MSSV", "Họ Tên", "Giới tính", "Ngày sinh", "Nơi sinh", "Lớp" };
             int[] colWidth = { 120, 240, 100, 150, 200, 100 };
 
-            // Đổi tên các column và set độ rộng
+            // Đổi tên các column header và set độ rộng
             for (int i = 0; i < dtgv.Columns.Count; i++)
             {
                 dtgv.Columns[i].HeaderText = colHeader[i];
@@ -64,22 +64,18 @@ namespace OBM.App.Views
         {
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                //using (StudentDetails f = new StudentDetails())
-                //{
-                //    f.StudentID = dtgv.Rows[e.RowIndex].Cells[0].Value.ToString();
-                //    f.FormClosed += new FormClosedEventHandler(ReloadForm);
-                //    f.ShowDialog();
-                //}
-
-                if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("UCStudentDetails"))
+                // UserControl chưa từng được mở thì thêm mới vào
+                if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("ucStudentDetails"))
                 {
                     ucStudentDetails uc = new ucStudentDetails();
                     uc.Dock = DockStyle.Fill;
                     uc.StudentID = dtgv.Rows[e.RowIndex].Cells[0].Value.ToString();
                     Dashboard.Instance.PnlContainer.Controls.Add(uc);
                 }
-                Dashboard.Instance.PnlContainer.Controls["UCStudentDetails"].BringToFront();
-                Dashboard.Instance.BackButton.Enabled = true;
+
+                // Hiển thị UserControl
+                Dashboard.Instance.PnlContainer.Controls["ucStudentDetails"].BringToFront();
+                Dashboard.Instance.BackButton.Visible = true;
                 Dashboard.Instance.PnlMenu.Enabled = false;
             }
         }

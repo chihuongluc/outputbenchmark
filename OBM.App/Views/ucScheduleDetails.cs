@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OBM.App.Views
 {
-    public partial class ucTest : UserControl
+    public partial class ucScheduleDetails : UserControl
     {
-        public ucTest()
+        public ucScheduleDetails()
         {
             InitializeComponent();
         }
