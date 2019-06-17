@@ -40,7 +40,7 @@ namespace OBM.App.Views
                 })
                 .ToList();
 
-            labTotal.Text = "Tổng: " + listStudentVM.Count();
+            labTotal.Text = string.Format("Tổng: {0}", listStudentVM.Count());
             dtgv.DataSource = listStudentVM;
 
             // Xoá auto size cho tất cả các column

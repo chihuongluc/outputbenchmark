@@ -46,19 +46,31 @@ namespace OBM.App.Views
             tvFinalTest.AfterSelect += TvFinalTest_AfterSelect;
             var listFinalTest = FinalTestService.Ins.GetAll();
             var listFinalTestVM = Mapper.Map<List<FinalTestVM>>(listFinalTest);
-            labTotalFinalTest.Text = "Tổng: " + listFinalTestVM.Count();
+            labTotalFinalTest.Text = string.Format("Tổng: {0}", listFinalTestVM.Count());
 
             foreach (var item in listFinalTestVM)
             {
                 TreeNode root = new TreeNode();
-                root.Text = "Kỳ thi KTNL CĐR " + item.StartDate.ToString("dd/MM/yyyy");
+                root.Text = string.Format("Kỳ thi KTNL CĐR {0}", item.StartDate.ToString("dd/MM/yyyy"));
                 root.Tag = item.ID;
                 root.Checked = true;
 
-                TreeNode startDate = new TreeNode() { Text = "Ngày bắt đầu: " + item.StartDate.ToString("dd/MM/yyyy") };
-                TreeNode endDate = new TreeNode() { Text = "Ngày kết thúc: " + (item.EndDate.HasValue ? item.EndDate.Value.ToString("dd/MM/yyyy") : "...") };
-                TreeNode times = new TreeNode() { Text = "Đợt: " + (item.Times.HasValue ? item.Times.ToString() : "...") };
-                TreeNode done = new TreeNode() { Text = "Trạng thái: " + (item.Done ? "Đã hoàn thành" : "Chưa hoàn thành") };
+                TreeNode startDate = new TreeNode()
+                {
+                    Text = string.Format("Ngày bắt đầu: {0}", item.StartDate.ToString("dd/MM/yyyy"))
+                };
+                TreeNode endDate = new TreeNode()
+                {
+                    Text = string.Format("Ngày kết thúc: {0}", (item.EndDate.HasValue ? item.EndDate.Value.ToString("dd/MM/yyyy") : "..."))
+                };
+                TreeNode times = new TreeNode()
+                {
+                    Text = string.Format("Đợt: {0}", (item.Times.HasValue ? item.Times.ToString() : "..."))
+                };
+                TreeNode done = new TreeNode()
+                {
+                    Text = string.Format("Trạng thái: {0}", (item.Done ? "Đã hoàn thành" : "Chưa hoàn thành"))
+                };
                 root.Nodes.Add(startDate);
                 root.Nodes.Add(endDate);
                 root.Nodes.Add(times);
@@ -72,15 +84,15 @@ namespace OBM.App.Views
         {
             var listSchedule = ScheduleService.Ins.GetByFinalTestID(finalTestID);
             var listScheduleVM = Mapper.Map<List<ScheduleVM>>(listSchedule);
-            labTotalSchedule.Text = "Tổng: " + listScheduleVM.Count();
+            labTotalSchedule.Text = string.Format("Tổng: {0}", listScheduleVM.Count());
 
             foreach (var item in listScheduleVM)
             {
-                ucSchedule uc = new ucSchedule();
-                uc.Date = item.TestDate;
-                uc.Time = item.TestTime;
+                ucRowSchedule uc = new ucRowSchedule();
                 uc.Subject = item.Subject.Name;
-                uc.Room = item.Room.Name;
+                uc.DateTime = string.Format("Thời gian: {0} - Ngày {1}", item.TestTime, item.TestDate);
+                uc.Room = string.Format("Phòng: {0}", item.Room.Name);
+                uc.Width = flpSchedule.Width - 20;
                 flpSchedule.Controls.Add(uc);
             }
         }
@@ -97,7 +109,7 @@ namespace OBM.App.Views
 
             // Load lại các controls mới vào flp theo finalTestID
             string finalTestID = e.Node.Tag.ToString();
-            labScheduleTitle.Text = "Lịch thi " + e.Node.Text;
+            labScheduleTitle.Text = e.Node.Text;
             LoadSchedule(finalTestID);
         }
 
@@ -106,18 +118,18 @@ namespace OBM.App.Views
 
         }
 
-        private void BtnScheduleDetails_Click(object sender, EventArgs e)
+        private void BtnDetails_Click(object sender, EventArgs e)
         {
             // UserControl chưa từng được mở thì thêm mới vào
-            if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("ucScheduleDetails"))
+            if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("ucSchedules"))
             {
-                ucScheduleDetails uc = new ucScheduleDetails();
+                ucSchedules uc = new ucSchedules();
                 uc.Dock = DockStyle.Fill;
                 Dashboard.Instance.PnlContainer.Controls.Add(uc);
             }
 
             // Hiển thị UserControl
-            Dashboard.Instance.PnlContainer.Controls["ucScheduleDetails"].BringToFront();
+            Dashboard.Instance.PnlContainer.Controls["ucSchedules"].BringToFront();
             Dashboard.Instance.BackButton.Visible = true;
             Dashboard.Instance.PnlMenu.Enabled = false;
         }

@@ -83,6 +83,16 @@ namespace OBM.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap details_24px {
+            get {
+                object obj = ResourceManager.GetObject("details_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Download_24px {
             get {
                 object obj = ResourceManager.GetObject("Download_24px", resourceCulture);

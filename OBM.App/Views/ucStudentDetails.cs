@@ -46,10 +46,10 @@ namespace OBM.App.Views
                 var student = StudentService.Ins.GetSingleByID(studentID);
                 var studentVM = Mapper.Map<StudentVM>(student);
 
-                string fullname = studentVM.LastName + " " + studentVM.FirstName;
+                string fullname = string.Format("{0} {1}", studentVM.LastName, studentVM.FirstName);
                 string birthday = studentVM.Birthday;
                 txbStudentID.Text = studentID;
-                labTitle.Text = "SV " + fullname;
+                labTitle.Text = fullname;
                 txbFullname.Text = fullname;
                 txbCourse.Text = studentVM.Course;
                 txbMobile.Text = studentVM.Mobile;

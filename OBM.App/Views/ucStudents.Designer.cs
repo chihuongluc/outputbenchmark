@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.btnImportExcel = new System.Windows.Forms.Button();
-            this.btnDownloadTemplate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -53,8 +51,6 @@
             // 
             // pnlTop
             // 
-            this.pnlTop.Controls.Add(this.btnImportExcel);
-            this.pnlTop.Controls.Add(this.btnDownloadTemplate);
             this.pnlTop.Controls.Add(this.label5);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -62,46 +58,12 @@
             this.pnlTop.Size = new System.Drawing.Size(950, 60);
             this.pnlTop.TabIndex = 3;
             // 
-            // btnImportExcel
-            // 
-            this.btnImportExcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnImportExcel.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnImportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportExcel.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportExcel.ForeColor = System.Drawing.Color.Green;
-            this.btnImportExcel.Image = global::OBM.App.Properties.Resources.Excel_24px;
-            this.btnImportExcel.Location = new System.Drawing.Point(574, 20);
-            this.btnImportExcel.Name = "btnImportExcel";
-            this.btnImportExcel.Size = new System.Drawing.Size(185, 32);
-            this.btnImportExcel.TabIndex = 15;
-            this.btnImportExcel.Text = "Nhập vào từ excel";
-            this.btnImportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImportExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImportExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnDownloadTemplate
-            // 
-            this.btnDownloadTemplate.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDownloadTemplate.FlatAppearance.BorderSize = 0;
-            this.btnDownloadTemplate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDownloadTemplate.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDownloadTemplate.ForeColor = System.Drawing.Color.White;
-            this.btnDownloadTemplate.Image = global::OBM.App.Properties.Resources.Download_24px;
-            this.btnDownloadTemplate.Location = new System.Drawing.Point(765, 20);
-            this.btnDownloadTemplate.Name = "btnDownloadTemplate";
-            this.btnDownloadTemplate.Size = new System.Drawing.Size(185, 32);
-            this.btnDownloadTemplate.TabIndex = 15;
-            this.btnDownloadTemplate.Text = "Tải xuống mẫu excel";
-            this.btnDownloadTemplate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDownloadTemplate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDownloadTemplate.UseVisualStyleBackColor = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label5.Location = new System.Drawing.Point(10, 20);
+            this.label5.Location = new System.Drawing.Point(0, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 32);
             this.label5.TabIndex = 14;
@@ -202,7 +164,7 @@
             this.dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(99)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -227,7 +189,7 @@
             this.dtgv.RowTemplate.Height = 34;
             this.dtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv.Size = new System.Drawing.Size(930, 469);
-            this.dtgv.TabIndex = 0;
+            this.dtgv.TabIndex = 2;
             this.dtgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_CellDoubleClick);
             // 
             // ucStudents
@@ -258,8 +220,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Button btnImportExcel;
-        private System.Windows.Forms.Button btnDownloadTemplate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

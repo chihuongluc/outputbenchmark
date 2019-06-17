@@ -40,6 +40,11 @@
             this.cbDay = new System.Windows.Forms.ComboBox();
             this.cbBirthplace = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
+            this.txbEmail = new OBM.App.Common.MyTextBox();
+            this.txbMobile = new OBM.App.Common.MyTextBox();
+            this.txbCourse = new OBM.App.Common.MyTextBox();
+            this.txbFullname = new OBM.App.Common.MyTextBox();
+            this.txbStudentID = new OBM.App.Common.MyTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,11 +56,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txbEmail = new OBM.App.Common.MyTextBox();
-            this.txbMobile = new OBM.App.Common.MyTextBox();
-            this.txbCourse = new OBM.App.Common.MyTextBox();
-            this.txbFullname = new OBM.App.Common.MyTextBox();
-            this.txbStudentID = new OBM.App.Common.MyTextBox();
             this.panelTop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -112,7 +112,7 @@
             this.labTitle.AutoSize = true;
             this.labTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.labTitle.Location = new System.Drawing.Point(10, 20);
+            this.labTitle.Location = new System.Drawing.Point(0, 20);
             this.labTitle.Name = "labTitle";
             this.labTitle.Size = new System.Drawing.Size(197, 32);
             this.labTitle.TabIndex = 14;
@@ -152,7 +152,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label9.Location = new System.Drawing.Point(10, 20);
+            this.label9.Location = new System.Drawing.Point(0, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(141, 23);
             this.label9.TabIndex = 22;
@@ -163,7 +163,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.label3.Location = new System.Drawing.Point(10, 197);
+            this.label3.Location = new System.Drawing.Point(0, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(245, 23);
             this.label3.TabIndex = 22;
@@ -242,7 +242,7 @@
             // 
             // cbGender
             // 
-            this.cbGender.BackColor = System.Drawing.Color.White;
+            this.cbGender.BackColor = System.Drawing.SystemColors.Window;
             this.cbGender.DropDownHeight = 280;
             this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.Enabled = false;
@@ -256,6 +256,67 @@
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(210, 29);
             this.cbGender.TabIndex = 7;
+            // 
+            // txbEmail
+            // 
+            this.txbEmail.Enabled = false;
+            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.txbEmail.Location = new System.Drawing.Point(712, 147);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(210, 29);
+            this.txbEmail.TabIndex = 21;
+            this.txbEmail.WaterMarkColor = System.Drawing.Color.Gray;
+            this.txbEmail.WaterMarkText = "Email";
+            // 
+            // txbMobile
+            // 
+            this.txbMobile.Enabled = false;
+            this.txbMobile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbMobile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.txbMobile.Location = new System.Drawing.Point(484, 147);
+            this.txbMobile.Name = "txbMobile";
+            this.txbMobile.Size = new System.Drawing.Size(210, 29);
+            this.txbMobile.TabIndex = 21;
+            this.txbMobile.WaterMarkColor = System.Drawing.Color.Gray;
+            this.txbMobile.WaterMarkText = "Số điện thoại";
+            // 
+            // txbCourse
+            // 
+            this.txbCourse.Enabled = false;
+            this.txbCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.txbCourse.Location = new System.Drawing.Point(712, 83);
+            this.txbCourse.Name = "txbCourse";
+            this.txbCourse.Size = new System.Drawing.Size(210, 29);
+            this.txbCourse.TabIndex = 21;
+            this.txbCourse.WaterMarkColor = System.Drawing.Color.Gray;
+            this.txbCourse.WaterMarkText = "Lớp";
+            // 
+            // txbFullname
+            // 
+            this.txbFullname.BackColor = System.Drawing.SystemColors.Window;
+            this.txbFullname.Enabled = false;
+            this.txbFullname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.txbFullname.Location = new System.Drawing.Point(256, 83);
+            this.txbFullname.Name = "txbFullname";
+            this.txbFullname.Size = new System.Drawing.Size(210, 29);
+            this.txbFullname.TabIndex = 21;
+            this.txbFullname.WaterMarkColor = System.Drawing.Color.Gray;
+            this.txbFullname.WaterMarkText = "Họ và tên";
+            // 
+            // txbStudentID
+            // 
+            this.txbStudentID.Enabled = false;
+            this.txbStudentID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbStudentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.txbStudentID.Location = new System.Drawing.Point(28, 83);
+            this.txbStudentID.Name = "txbStudentID";
+            this.txbStudentID.Size = new System.Drawing.Size(210, 29);
+            this.txbStudentID.TabIndex = 21;
+            this.txbStudentID.WaterMarkColor = System.Drawing.Color.Gray;
+            this.txbStudentID.WaterMarkText = "MSSV";
             // 
             // label8
             // 
@@ -371,66 +432,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(930, 358);
             this.panel4.TabIndex = 10;
-            // 
-            // txbEmail
-            // 
-            this.txbEmail.Enabled = false;
-            this.txbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.txbEmail.Location = new System.Drawing.Point(712, 147);
-            this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(210, 29);
-            this.txbEmail.TabIndex = 21;
-            this.txbEmail.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbEmail.WaterMarkText = "Email";
-            // 
-            // txbMobile
-            // 
-            this.txbMobile.Enabled = false;
-            this.txbMobile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbMobile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.txbMobile.Location = new System.Drawing.Point(484, 147);
-            this.txbMobile.Name = "txbMobile";
-            this.txbMobile.Size = new System.Drawing.Size(210, 29);
-            this.txbMobile.TabIndex = 21;
-            this.txbMobile.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbMobile.WaterMarkText = "Số điện thoại";
-            // 
-            // txbCourse
-            // 
-            this.txbCourse.Enabled = false;
-            this.txbCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCourse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.txbCourse.Location = new System.Drawing.Point(712, 83);
-            this.txbCourse.Name = "txbCourse";
-            this.txbCourse.Size = new System.Drawing.Size(210, 29);
-            this.txbCourse.TabIndex = 21;
-            this.txbCourse.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbCourse.WaterMarkText = "Lớp";
-            // 
-            // txbFullname
-            // 
-            this.txbFullname.Enabled = false;
-            this.txbFullname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.txbFullname.Location = new System.Drawing.Point(256, 83);
-            this.txbFullname.Name = "txbFullname";
-            this.txbFullname.Size = new System.Drawing.Size(210, 29);
-            this.txbFullname.TabIndex = 21;
-            this.txbFullname.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbFullname.WaterMarkText = "Họ và tên";
-            // 
-            // txbStudentID
-            // 
-            this.txbStudentID.Enabled = false;
-            this.txbStudentID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbStudentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.txbStudentID.Location = new System.Drawing.Point(28, 83);
-            this.txbStudentID.Name = "txbStudentID";
-            this.txbStudentID.Size = new System.Drawing.Size(210, 29);
-            this.txbStudentID.TabIndex = 21;
-            this.txbStudentID.WaterMarkColor = System.Drawing.Color.Gray;
-            this.txbStudentID.WaterMarkText = "MSSV";
             // 
             // ucStudentDetails
             // 

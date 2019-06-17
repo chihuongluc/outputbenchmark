@@ -133,17 +133,17 @@
     <Compile Include="Views\ucFinalTest.Designer.cs">
       <DependentUpon>ucFinalTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ucSchedule.cs">
+    <Compile Include="Views\ucRowSchedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucSchedule.Designer.cs">
-      <DependentUpon>ucSchedule.cs</DependentUpon>
+    <Compile Include="Views\ucRowSchedule.Designer.cs">
+      <DependentUpon>ucRowSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ucScheduleDetails.cs">
+    <Compile Include="Views\ucSchedules.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ucScheduleDetails.Designer.cs">
-      <DependentUpon>ucScheduleDetails.cs</DependentUpon>
+    <Compile Include="Views\ucSchedules.Designer.cs">
+      <DependentUpon>ucSchedules.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ucStudentDetails.cs">
       <SubType>UserControl</SubType>
@@ -177,11 +177,11 @@
     <EmbeddedResource Include="Views\ucFinalTest.resx">
       <DependentUpon>ucFinalTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucSchedule.resx">
-      <DependentUpon>ucSchedule.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ucRowSchedule.resx">
+      <DependentUpon>ucRowSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ucScheduleDetails.resx">
-      <DependentUpon>ucScheduleDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ucSchedules.resx">
+      <DependentUpon>ucSchedules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ucStudentDetails.resx">
       <DependentUpon>ucStudentDetails.cs</DependentUpon>
@@ -278,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undo_white_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
