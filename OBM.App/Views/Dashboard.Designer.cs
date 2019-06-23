@@ -56,6 +56,7 @@ namespace OBM.App.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.dragControl1 = new OBM.App.Common.DragControl();
+            this.dragControl2 = new OBM.App.Common.DragControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAccountImage)).BeginInit();
             this.pnlLeft.SuspendLayout();
@@ -387,6 +388,10 @@ namespace OBM.App.Views
             // 
             this.dragControl1.SelectControl = this.panel1;
             // 
+            // dragControl2
+            // 
+            this.dragControl2.SelectControl = this.label2;
+            // 
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -443,5 +448,6 @@ namespace OBM.App.Views
         private System.Windows.Forms.Button btnSubjectAndRoom;
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnScore;
+        private DragControl dragControl2;
     }
 }

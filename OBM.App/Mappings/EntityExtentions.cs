@@ -18,8 +18,7 @@ namespace OBM.App.Mappings
         {
             model.ID = viewModel.ID;
             model.Name = viewModel.Name;
-            model.MaxCapacity = viewModel.MaxCapacity;
-            model.Booked = viewModel.Booked;
+            model.MaxSize = viewModel.MaxSize;
         }
 
         public static void UpdateRegister(this Register model, RegisterVM viewModel)
@@ -50,6 +49,8 @@ namespace OBM.App.Mappings
             model.ID = viewModel.ID;
             model.FinalTestID = viewModel.FinalTestID;
             model.SubjectID = viewModel.SubjectID;
+            model.GroupOf = viewModel.GroupOf;
+            model.MaxSize = viewModel.MaxSize;
             model.RoomID = viewModel.RoomID;
             model.TestDate = viewModel.TestDate;
             model.TestTime = viewModel.TestTime;
@@ -59,14 +60,16 @@ namespace OBM.App.Mappings
         {
             model.ID = viewModel.ID;
             model.Name = viewModel.Name;
-            model.Code = viewModel.Code;
         }
 
         public static void UpdateScore(this Score model, ScoreVM viewModel)
         {
             model.ID = viewModel.ID;
+            model.Code = viewModel.Code;
             model.Times = viewModel.Times;
             model.Value = viewModel.Value;
+            model.Passed = viewModel.Passed;
+            model.Note = viewModel.Note;
         }
 
         public static void UpdateToeicScore(this ToeicScore model, ToeicScoreVM viewModel)
@@ -100,7 +103,6 @@ namespace OBM.App.Mappings
         {
             model.UserName = viewModel.UserName;
             model.Password = viewModel.Password;
-            model.DisplayName = viewModel.DisplayName;
             model.Email = viewModel.Email;
             model.RoleID = viewModel.RoleID;
         }

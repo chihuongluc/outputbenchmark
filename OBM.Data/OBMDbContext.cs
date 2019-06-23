@@ -29,25 +29,17 @@ namespace OBM.Data
                 .Property(e => e.Email)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<ChineseScore>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
             modelBuilder.Entity<FinalTest>()
                 .HasMany(e => e.Schedules)
                 .WithRequired(e => e.FinalTest)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<ITScore>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Register>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
-
             modelBuilder.Entity<Register>()
                 .Property(e => e.StudentID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Register>()
+                .Property(e => e.SubjectID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Register>()
@@ -59,17 +51,12 @@ namespace OBM.Data
                 .WithRequired(e => e.Role)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Room>()
-                .HasMany(e => e.Schedules)
-                .WithRequired(e => e.Room)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Schedule>()
-                .Property(e => e.TestDate)
+                .Property(e => e.SubjectID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Score>()
-                .Property(e => e.ID)
+                .Property(e => e.Code)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Score>()
@@ -110,7 +97,7 @@ namespace OBM.Data
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Subject>()
-                .Property(e => e.Code)
+                .Property(e => e.ID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Subject>()
@@ -122,10 +109,6 @@ namespace OBM.Data
                 .HasMany(e => e.Schedules)
                 .WithRequired(e => e.Subject)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<ToeicScore>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
         }
     }
 }

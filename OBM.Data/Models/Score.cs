@@ -1,17 +1,26 @@
 namespace OBM.Data.Models
 {
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-    [Table("Score")]
     public partial class Score
     {
-        [StringLength(10)]
         public string ID { get; set; }
 
-        public int Times { get; set; }
+        [StringLength(10)]
+        public string Code { get; set; }
+
+        public int? Times { get; set; }
 
         public double? Value { get; set; }
+
+        public bool? Passed { get; set; }
+
+        [StringLength(100)]
+        public string Note { get; set; }
 
         public virtual ChineseScore ChineseScore { get; set; }
 

@@ -1,10 +1,11 @@
 namespace OBM.Data.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-    [Table("Student")]
     public partial class Student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,19 +25,15 @@ namespace OBM.Data.Models
         [StringLength(10)]
         public string FirstName { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string Gender { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string Birthday { get; set; }
 
-        [Required]
         [StringLength(100)]
         public string Birthplace { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string Course { get; set; }
 

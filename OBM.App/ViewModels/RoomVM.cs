@@ -8,9 +8,7 @@ namespace OBM.App.ViewModels
 
         public string Name { get; set; }
 
-        public int MaxCapacity { get; set; }
-
-        public bool Booked { get; set; }
+        public int MaxSize { get; set; }
 
         public virtual ICollection<ScheduleVM> Schedules { get; set; }
     }

@@ -10,10 +10,16 @@ using System.Windows.Forms;
 using OBM.Service;
 using AutoMapper;
 using OBM.App.ViewModels;
+using OBM.App.Mappings;
 
 namespace OBM.App.Views
 {
-    public partial class ucFinalTest : UserControl
+    public interface IFinalTest
+    {
+        void PerformRefresh();
+    }
+
+    public partial class ucFinalTest : UserControl, IFinalTest
     {
         public ucFinalTest()
         {
@@ -26,6 +32,11 @@ namespace OBM.App.Views
             LoadTreeViewFinalTest();
             ResizeVerticalScrollBar(pnlFinalTest, flpFinalTest);
             ResizeVerticalScrollBar(pnlSchedule, flpSchedule);
+        }
+
+        public void PerformRefresh()
+        {
+            LoadForm();
         }
 
         /// <summary>
@@ -43,10 +54,13 @@ namespace OBM.App.Views
 
         private void LoadTreeViewFinalTest()
         {
+            tvFinalTest.Nodes.Clear();
             tvFinalTest.AfterSelect += TvFinalTest_AfterSelect;
             var listFinalTest = FinalTestService.Ins.GetAll();
             var listFinalTestVM = Mapper.Map<List<FinalTestVM>>(listFinalTest);
-            labTotalFinalTest.Text = string.Format("Tổng: {0}", listFinalTestVM.Count());
+            listFinalTestVM = listFinalTestVM.OrderByDescending(p => p.StartDate).ToList();
+            int count = listFinalTestVM.Count();
+            labTotalFinalTest.Text = string.Format("Tổng: {0}", count);
 
             foreach (var item in listFinalTestVM)
             {
@@ -77,23 +91,38 @@ namespace OBM.App.Views
                 root.Nodes.Add(done);
                 tvFinalTest.Nodes.Add(root);
             }
-            tvFinalTest.SelectedNode = tvFinalTest.Nodes[0];
+
+            if(count != 0)
+                tvFinalTest.SelectedNode = tvFinalTest.Nodes[0];
         }
 
         private void LoadSchedule(string finalTestID)
         {
-            var listSchedule = ScheduleService.Ins.GetByFinalTestID(finalTestID);
-            var listScheduleVM = Mapper.Map<List<ScheduleVM>>(listSchedule);
+            var listSchedule = ScheduleService.Ins.GetByFinalTestID(finalTestID, new string[] { "Subject", "Room" });
+            var listScheduleVM = Mapper.Map<IEnumerable<ScheduleVM>>(listSchedule);
+            listScheduleVM = listScheduleVM.OrderBy(p => p.Subject.Name);
             labTotalSchedule.Text = string.Format("Tổng: {0}", listScheduleVM.Count());
 
             foreach (var item in listScheduleVM)
             {
                 ucRowSchedule uc = new ucRowSchedule();
-                uc.Subject = item.Subject.Name;
-                uc.DateTime = string.Format("Thời gian: {0} - Ngày {1}", item.TestTime, item.TestDate);
+                uc.Subject = string.Format("{0} ({1})", item.Subject.Name, item.GroupOf);
+                uc.DateTime = string.Format("Thời gian: {0} - Ngày {1:dd/MM/yyyy}", item.TestTime, item.TestDate);
                 uc.Room = string.Format("Phòng: {0}", item.Room.Name);
                 uc.Width = flpSchedule.Width - 20;
+                uc.BtnEdit.Tag = item.ID;
+                uc.BtnEdit.Click += BtnEdit_Click;
                 flpSchedule.Controls.Add(uc);
+            }
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            using(UpdateSchedule frm = new UpdateSchedule())
+            {
+                frm.ScheduleID = (sender as Button).Tag.ToString();
+                frm.ucFinalTest = this;
+                frm.ShowDialog();
             }
         }
 
@@ -115,7 +144,19 @@ namespace OBM.App.Views
 
         private void BtnAddFinalTest_Click(object sender, EventArgs e)
         {
+            // Kiểm tra các kỳ thi đã hoàn thành chưa?
+            if (FinalTestService.Ins.GetStatus(out string startDate))
+            {
+                string mess = string.Format("Vui lòng đóng kỳ thi KTNL CĐR {0} trước khi mở kỳ thi mới.", startDate);
+                MessageBox.Show(mess, "Thêm kỳ thi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
 
+            using (AddFinalTest frm = new AddFinalTest())
+            {
+                frm.ucFinalTest = this;
+                frm.ShowDialog();
+            }
         }
 
         private void BtnDetails_Click(object sender, EventArgs e)
@@ -124,6 +165,7 @@ namespace OBM.App.Views
             if (!Dashboard.Instance.PnlContainer.Controls.ContainsKey("ucSchedules"))
             {
                 ucSchedules uc = new ucSchedules();
+                uc.FinalTestName = labScheduleTitle.Text;
                 uc.Dock = DockStyle.Fill;
                 Dashboard.Instance.PnlContainer.Controls.Add(uc);
             }

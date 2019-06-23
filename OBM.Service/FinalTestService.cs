@@ -22,6 +22,11 @@ namespace OBM.Service
         {
         }
 
+        public FinalTest Add(FinalTest entity)
+        {
+            return DataProvider.Ins.DB.FinalTests.Add(entity);
+        }
+
         public List<FinalTest> GetAll()
         {
             return DataProvider.Ins.DB.FinalTests.ToList();
@@ -30,6 +35,23 @@ namespace OBM.Service
         public FinalTest GetSingleByID(string id)
         {
             return DataProvider.Ins.DB.FinalTests.Find(id);
+        }
+
+        public int GetTimesByYear(int year)
+        {
+            return DataProvider.Ins.DB.FinalTests.Where(p => p.StartDate.Year == year).Count();
+        }
+
+        public bool GetStatus(out string startDate)
+        {
+            startDate = null;
+            var result = DataProvider.Ins.DB.FinalTests.Where(p => p.Done == false);
+            if(result.Count() > 0)
+            {
+                startDate = result.FirstOrDefault().StartDate.ToString("dd/MM/yyyy");
+                return true;
+            }
+            return false;
         }
     }
 }

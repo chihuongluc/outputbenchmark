@@ -36,6 +36,7 @@
             this.labSubject = new System.Windows.Forms.Label();
             this.labDateTime = new System.Windows.Forms.Label();
             this.labRoom = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,30 +90,44 @@
             // 
             // labDateTime
             // 
-            this.labDateTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labDateTime.Dock = System.Windows.Forms.DockStyle.Top;
             this.labDateTime.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.labDateTime.Location = new System.Drawing.Point(80, 36);
             this.labDateTime.Name = "labDateTime";
-            this.labDateTime.Size = new System.Drawing.Size(320, 44);
+            this.labDateTime.Size = new System.Drawing.Size(320, 22);
             this.labDateTime.TabIndex = 6;
             this.labDateTime.Text = "Time";
             // 
             // labRoom
             // 
-            this.labRoom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labRoom.Dock = System.Windows.Forms.DockStyle.Left;
             this.labRoom.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.labRoom.Location = new System.Drawing.Point(80, 58);
             this.labRoom.Name = "labRoom";
-            this.labRoom.Size = new System.Drawing.Size(320, 22);
+            this.labRoom.Size = new System.Drawing.Size(285, 22);
             this.labRoom.TabIndex = 7;
             this.labRoom.Text = "Room";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(365, 58);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(35, 22);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // ucRowSchedule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.labRoom);
             this.Controls.Add(this.labDateTime);
             this.Controls.Add(this.labSubject);
@@ -138,5 +153,6 @@
         private System.Windows.Forms.Label labSubject;
         private System.Windows.Forms.Label labDateTime;
         private System.Windows.Forms.Label labRoom;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

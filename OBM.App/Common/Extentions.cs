@@ -10,6 +10,11 @@ namespace OBM.App.Common
 {
     public static class Extentions
     {
+        public static string toeicID = "AV";
+        public static string hoaVanID = "HV";
+        public static string thvpID = "THVP";
+        public static string thcbID = "THCB";
+
         public static void AddFormIntoPanel(object frm, Panel pnl)
         {
             if (pnl.Controls.Count > 0)

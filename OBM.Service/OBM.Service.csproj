@@ -50,9 +50,12 @@
   <ItemGroup>
     <Compile Include="FinalTestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterService.cs" />
+    <Compile Include="RoomService.cs" />
     <Compile Include="ScheduleService.cs" />
     <Compile Include="StudentService.cs" />
     <Compile Include="SubjectService.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

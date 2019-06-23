@@ -173,6 +173,16 @@ namespace OBM.App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiply_filled_gray_24px {
+            get {
+                object obj = ResourceManager.GetObject("multiply_filled_gray_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_24px {
             get {
                 object obj = ResourceManager.GetObject("Save_24px", resourceCulture);

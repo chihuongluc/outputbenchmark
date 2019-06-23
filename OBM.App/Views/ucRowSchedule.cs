@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OBM.App.Mappings;
 
 namespace OBM.App.Views
 {
@@ -29,6 +30,13 @@ namespace OBM.App.Views
             get { return this.labRoom.Text; }
             set { this.labRoom.Text = value; }
         }
+
+        public Button BtnEdit
+        {
+            get { return this.btnEdit; }
+            set { this.btnEdit = value; }
+        }
+
         public ucRowSchedule()
         {
             InitializeComponent();

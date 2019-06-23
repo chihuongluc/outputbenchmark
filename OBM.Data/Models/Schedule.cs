@@ -1,10 +1,11 @@
 namespace OBM.Data.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-    [Table("Schedule")]
     public partial class Schedule
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,15 +20,19 @@ namespace OBM.Data.Models
         [StringLength(128)]
         public string FinalTestID { get; set; }
 
-        public int SubjectID { get; set; }
-
-        public int RoomID { get; set; }
-
         [Required]
-        [StringLength(10)]
-        public string TestDate { get; set; }
+        [StringLength(4)]
+        public string SubjectID { get; set; }
 
-        [Required]
+        public int? GroupOf { get; set; }
+
+        public int? MaxSize { get; set; }
+
+        public int? RoomID { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? TestDate { get; set; }
+
         [StringLength(10)]
         public string TestTime { get; set; }
 

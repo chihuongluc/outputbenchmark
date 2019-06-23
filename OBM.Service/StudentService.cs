@@ -19,6 +19,11 @@ namespace OBM.Service
         {
         }
 
+        public virtual Student Add(Student entity)
+        {
+            return DataProvider.Ins.DB.Students.Add(entity);
+        }
+
         public List<Student> GetAll()
         {
             return DataProvider.Ins.DB.Students.ToList();

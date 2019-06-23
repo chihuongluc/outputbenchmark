@@ -1,12 +1,13 @@
 namespace OBM.Data.Models
 {
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-    [Table("ITScore")]
     public partial class ITScore
     {
-        [StringLength(10)]
         public string ID { get; set; }
 
         public double? WindowInternet { get; set; }

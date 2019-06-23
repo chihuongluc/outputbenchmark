@@ -38,12 +38,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.labTotalFinalTest = new System.Windows.Forms.Label();
-            this.mySeparator3 = new OBM.App.Common.MySeparator();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAddFinalTest = new System.Windows.Forms.Button();
             this.btnCloseFinalTest = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.mySeparator1 = new OBM.App.Common.MySeparator();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlSchedule = new System.Windows.Forms.Panel();
@@ -52,11 +50,13 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.labTotalSchedule = new System.Windows.Forms.Label();
-            this.mySeparator4 = new OBM.App.Common.MySeparator();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnDetails = new System.Windows.Forms.Button();
             this.labScheduleTitle = new System.Windows.Forms.Label();
+            this.mySeparator4 = new OBM.App.Common.MySeparator();
             this.mySeparator2 = new OBM.App.Common.MySeparator();
+            this.mySeparator3 = new OBM.App.Common.MySeparator();
+            this.mySeparator1 = new OBM.App.Common.MySeparator();
             this.pnlTop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlFinalTest.SuspendLayout();
@@ -130,12 +130,14 @@
             this.tvFinalTest.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tvFinalTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.tvFinalTest.FullRowSelect = true;
+            this.tvFinalTest.HideSelection = false;
             this.tvFinalTest.ItemHeight = 32;
             this.tvFinalTest.LineColor = System.Drawing.Color.White;
             this.tvFinalTest.Location = new System.Drawing.Point(0, 0);
             this.tvFinalTest.Margin = new System.Windows.Forms.Padding(0);
             this.tvFinalTest.Name = "tvFinalTest";
             this.tvFinalTest.ShowLines = false;
+            this.tvFinalTest.ShowPlusMinus = false;
             this.tvFinalTest.Size = new System.Drawing.Size(403, 438);
             this.tvFinalTest.TabIndex = 0;
             // 
@@ -175,18 +177,6 @@
             this.labTotalFinalTest.Size = new System.Drawing.Size(46, 20);
             this.labTotalFinalTest.TabIndex = 18;
             this.labTotalFinalTest.Text = "Tổng:";
-            // 
-            // mySeparator3
-            // 
-            this.mySeparator3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mySeparator3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.mySeparator3.isVertical = false;
-            this.mySeparator3.Location = new System.Drawing.Point(0, 0);
-            this.mySeparator3.Name = "mySeparator3";
-            this.mySeparator3.Size = new System.Drawing.Size(470, 23);
-            this.mySeparator3.TabIndex = 17;
-            this.mySeparator3.Text = "mySeparator3";
-            this.mySeparator3.Thickness = 1;
             // 
             // panel6
             // 
@@ -245,17 +235,6 @@
             this.label1.Size = new System.Drawing.Size(138, 23);
             this.label1.TabIndex = 17;
             this.label1.Text = "Danh sách kỳ thi";
-            // 
-            // mySeparator1
-            // 
-            this.mySeparator1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.mySeparator1.isVertical = false;
-            this.mySeparator1.Location = new System.Drawing.Point(0, 50);
-            this.mySeparator1.Name = "mySeparator1";
-            this.mySeparator1.Size = new System.Drawing.Size(470, 23);
-            this.mySeparator1.TabIndex = 16;
-            this.mySeparator1.Text = "mySeparator1";
-            this.mySeparator1.Thickness = 1;
             // 
             // panel4
             // 
@@ -340,18 +319,6 @@
             this.labTotalSchedule.TabIndex = 18;
             this.labTotalSchedule.Text = "Tổng:";
             // 
-            // mySeparator4
-            // 
-            this.mySeparator4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mySeparator4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.mySeparator4.isVertical = false;
-            this.mySeparator4.Location = new System.Drawing.Point(0, 0);
-            this.mySeparator4.Name = "mySeparator4";
-            this.mySeparator4.Size = new System.Drawing.Size(470, 23);
-            this.mySeparator4.TabIndex = 17;
-            this.mySeparator4.Text = "mySeparator4";
-            this.mySeparator4.Thickness = 1;
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.btnDetails);
@@ -392,6 +359,18 @@
             this.labScheduleTitle.TabIndex = 17;
             this.labScheduleTitle.Text = "Lịch thi";
             // 
+            // mySeparator4
+            // 
+            this.mySeparator4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mySeparator4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mySeparator4.isVertical = false;
+            this.mySeparator4.Location = new System.Drawing.Point(0, 0);
+            this.mySeparator4.Name = "mySeparator4";
+            this.mySeparator4.Size = new System.Drawing.Size(470, 23);
+            this.mySeparator4.TabIndex = 17;
+            this.mySeparator4.Text = "mySeparator4";
+            this.mySeparator4.Thickness = 1;
+            // 
             // mySeparator2
             // 
             this.mySeparator2.ForeColor = System.Drawing.Color.Gainsboro;
@@ -402,6 +381,29 @@
             this.mySeparator2.TabIndex = 16;
             this.mySeparator2.Text = "mySeparator2";
             this.mySeparator2.Thickness = 1;
+            // 
+            // mySeparator3
+            // 
+            this.mySeparator3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mySeparator3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mySeparator3.isVertical = false;
+            this.mySeparator3.Location = new System.Drawing.Point(0, 0);
+            this.mySeparator3.Name = "mySeparator3";
+            this.mySeparator3.Size = new System.Drawing.Size(470, 23);
+            this.mySeparator3.TabIndex = 17;
+            this.mySeparator3.Text = "mySeparator3";
+            this.mySeparator3.Thickness = 1;
+            // 
+            // mySeparator1
+            // 
+            this.mySeparator1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.mySeparator1.isVertical = false;
+            this.mySeparator1.Location = new System.Drawing.Point(0, 50);
+            this.mySeparator1.Name = "mySeparator1";
+            this.mySeparator1.Size = new System.Drawing.Size(470, 23);
+            this.mySeparator1.TabIndex = 16;
+            this.mySeparator1.Text = "mySeparator1";
+            this.mySeparator1.Thickness = 1;
             // 
             // ucFinalTest
             // 

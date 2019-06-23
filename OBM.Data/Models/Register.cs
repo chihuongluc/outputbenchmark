@@ -1,19 +1,22 @@
 namespace OBM.Data.Models
 {
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
-    [Table("Register")]
     public partial class Register
     {
-        [StringLength(10)]
         public string ID { get; set; }
 
         [Required]
         [StringLength(10)]
         public string StudentID { get; set; }
 
-        public int SubjectID { get; set; }
+        [Required]
+        [StringLength(4)]
+        public string SubjectID { get; set; }
 
         [StringLength(128)]
         public string ScheduleID { get; set; }
