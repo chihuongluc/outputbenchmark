@@ -36,19 +36,17 @@ namespace OBM.App.Views
         private void LoadDataGridView()
         {
             var listRegister = RegisterService.Ins.GetMulti(null, new string[] { "Student", "Subject" });
-            var listRegisterVM = Mapper.Map<List<RegisterVM>>(listRegister)
-                .Select(p => new
+            var listRegisterVM = Mapper.Map<List<RegisterVM>>(listRegister).Select(p => new
                 {
                     SBD = "",
                     ID = p.StudentID,
                     Fullname = p.Student.LastName + " " + p.Student.FirstName,
                     Course = p.Student.Course,
                     Subject = p.Subject.Name
-                })
-                .ToList();
+                }).ToList();
 
             labTotal.Text = string.Format("Tổng: {0}", listRegisterVM.Count());
-            dtgv.DataSource = listRegisterVM.OrderBy(p => p.Subject).ToList();
+            dtgv.DataSource = listRegisterVM.OrderBy(p => p.Subject).OrderBy(p => p.ID).ToList();
 
             // Xoá auto size cho tất cả các column
             for (int i = 0; i < dtgv.Columns.Count - 1; i++)
@@ -79,6 +77,7 @@ namespace OBM.App.Views
 
         private void BtnImportExcel_Click(object sender, EventArgs e)
         {
+            int count = 0;
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
@@ -125,29 +124,27 @@ namespace OBM.App.Views
                             string email = "";
                             if (emailTemp != null)
                                 email = emailTemp.ToString();
-
                             string subjectID = workSheet.Cells[i, j++].Value.ToString(); // môn thi
 
-                            // tạo studentInfo từ dữ liệu đã lấy được
-                            var studentVM = new StudentVM()
-                            {
-                                ID = studentID,
-                                LastName = lastName,
-                                FirstName = firstName,
-                                Gender = sex,
-                                Birthday = dob,
-                                Birthplace = birthplace,
-                                Course = classroom,
-                                Mobile = phone,
-                                Email = email,
-                                PassForeignLanguage = false,
-                                PassInformationTechnology = false
-                            };
-
                             // add sinh viên vào csdl
-                            var student = new Student();
-                            student.UpdateStudent(studentVM);
-                            StudentService.Ins.Add(student);
+                            if(StudentService.Ins.GetSingleByID(studentID) == null)
+                            {
+                                var student = new Student()
+                                {
+                                    ID = studentID,
+                                    LastName = lastName,
+                                    FirstName = firstName,
+                                    Gender = sex,
+                                    Birthday = dob,
+                                    Birthplace = birthplace,
+                                    Course = classroom,
+                                    Mobile = phone,
+                                    Email = email,
+                                    PassForeignLanguage = false,
+                                    PassInformationTechnology = false
+                                };
+                                StudentService.Ins.Add(student);
+                            }
 
                             // add thông tin vào bảng Register
                             Register register = new Register()
@@ -157,21 +154,23 @@ namespace OBM.App.Views
                                 SubjectID = subjectID
                             };
                             RegisterService.Ins.Add(register);
+                            count++;
                         }
                         catch (Exception)
                         {
-
+                            count--;
                         }
                     }
                 }
                 if (UnitOfWork.Ins.Commit())
                 {
-                    MessageBox.Show("Import thành công", "");
+                    MessageBox.Show("Nhập thành công " + count + " sinh viên!", "Nhập sinh viên dự thi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                LoadDataGridView();
             }
             catch (Exception)
             {
-                MessageBox.Show("Error!");
+                MessageBox.Show("Dữ liệu nhập vào không hợp lệ!", "Nhập sinh viên dự thi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
